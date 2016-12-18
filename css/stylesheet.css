@@ -64,3 +64,8 @@ h1 {
 .name_levels:hover{
     color:gray;
 };
+
+img{
+    height:300px;
+    width:350px;
+}
