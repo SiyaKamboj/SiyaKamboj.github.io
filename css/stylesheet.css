@@ -12,6 +12,7 @@ h1 {
     margin-left:2000%;
     clear:both;
     border:4px solid black;
+    position:fixed;
 }
 
 #Math {
@@ -23,6 +24,7 @@ h1 {
     margin-left:2000%;
     clear:both;
     border:4px solid black;
+    position:fixed;
 }
 
 #Vocabulary{
@@ -34,6 +36,7 @@ h1 {
     margin-left:2000%;
     clear:both;
     border:4px solid black;
+    position:fixed;
 }
 
 .levels{
@@ -44,6 +47,7 @@ h1 {
     background-color:white;
     margin-top:-500%;
     margin-left:300%;
+    position:fixed;
 }
     
 .name_levels{
