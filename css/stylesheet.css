@@ -52,8 +52,8 @@ h1 {
 
 .name_levels{
     margin-top:1em;
-    text-align:center;
-    font-size:100%;
+    position:relative;
+    font-size:150%;
 }
 
 .name_levels:link{
