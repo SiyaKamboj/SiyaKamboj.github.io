@@ -17,24 +17,24 @@ h1 {
 
 #Math {
     background-color:pink;
-    height:30%;
+    height:35%;
     width:50% ;
     position:relative;
-    /*margin-top:0em;
-    margin-bottom:1em;
-    margin-left:20em;*/
+    margin-top:0%;
+    margin-bottom:5%;
+    margin-left:25%;
     clear:both;
     border:4px solid black;
 }
 
 #Vocabulary{
     background-color:yellow;
-    height:30%;
+    height:35%;
     width:50%;
     position:relative;
-    /* margin-top:0em;
-    margin-bottom:1em;
-    margin-left:20em;*/
+    margin-top:0%;
+    margin-bottom:5%;
+    margin-left:25%;
     clear:both;
     border:4px solid black;
 }
