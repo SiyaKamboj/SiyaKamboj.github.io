@@ -57,7 +57,7 @@ h1 {
 }
 
 .name_levels:link{
-    color:black;
+    color:black;    
 }
 
 .name_levels:visited{
@@ -67,6 +67,7 @@ h1 {
 
 .name_levels:hover{
     color:gray;
+    text-decoration:none;
 };
 
 img{
