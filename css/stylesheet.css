@@ -5,7 +5,7 @@ h1 {
 
 #Science {    
     background-color: #FF7F50;
-    height:15%;
+    height:40%;
     width:50%;
     position:relative;
     /*margin-top:0em;    
@@ -17,7 +17,7 @@ h1 {
 
 #Math {
     background-color:pink;
-    height:15%;
+    height:40%;
     width:50% ;
     position:relative;
     /*margin-top:0em;
@@ -29,7 +29,7 @@ h1 {
 
 #Vocabulary{
     background-color:yellow;
-    height:15%;
+    height:40%;
     width:50%;
     position:relative;
     /* margin-top:0em;
