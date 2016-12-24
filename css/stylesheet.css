@@ -53,7 +53,7 @@ h1 {
 .name_levels{
     margin-top:1em;
     text-align:center;
-    font-size:30%;
+    font-size:100%;
 }
 
 .name_levels:link{
