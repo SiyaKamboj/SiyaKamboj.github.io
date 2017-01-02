@@ -5,10 +5,14 @@ h1 {
 
 .vocablevels{
     height: 15%;
-    width: 25%;
-    margin-left: 5%;
+    width: 25%;    
     margin-top: 5%;
     background-color: crimson;
+    display:inline-block;
+    position:relative;
+    float:left;
+    border:4px solid black;   
+    margin-left:10%;
 }
 
 .vocab_name_levels{
