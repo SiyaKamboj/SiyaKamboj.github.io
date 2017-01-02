@@ -11,6 +11,8 @@ h1 {
     position:relative;
     float:left;      
     margin-left:10%;
+    text-align:center;
+    line-height:90px;
 }
 
 .vocab_name_levels{
