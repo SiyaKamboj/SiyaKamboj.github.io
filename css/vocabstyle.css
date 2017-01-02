@@ -6,7 +6,7 @@ h1 {
 .vocablevels{
     height: 15%;
     width: 25%;    
-    margin-top: 5%;
+    margin-top: 45%;
     background-color: crimson;
     display:inline-block;
     position:relative;
@@ -16,8 +16,7 @@ h1 {
 
 .vocab_name_levels{
     font-size:150%;    
-    position:relative;
-    margin-top:45%;
+    position:relative;    
     vertical-align:middle;
     text-align:center;
     
