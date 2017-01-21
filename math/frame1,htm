@@ -1,1 +1,18 @@
-
+<html>
+<link type="text/css" rel="stylesheet" href="/css/mathstyle.css">
+<head>
+  <title>Math Homepage</title>
+</head>
+<body style="background-color:bisque">
+  <h1>Math</h1>  
+  <div class="mathlevels"> 
+    <strong class="math_name_levels">Beginner</strong>
+  </div>
+  <div class="mathlevels">
+    <strong class="math_name_levels">Intermediate</strong>
+  </div>
+  <div class="mathlevels">
+    <strong class="math_name_levels"> Advanced</strong>
+  </div>
+  </body>
+  </html>
