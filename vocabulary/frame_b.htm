@@ -1,8 +1,8 @@
 <html>
     <head>
-        <!--<script>
-            document.getElementById("form1").style.display="none";
-        </script> !-->
+        <script>
+            document.getElementById("options").style.display="none";
+        </script>
     </head>
 
 <body>
@@ -13,7 +13,7 @@
     </ol>
     <!--<button onclick="vocabbeginnerstart()">Start the Test</button> !-->
     <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()" />
-    <div id="options" style="display:none;">
+    <div id="options">
     <form> 
         <input type="radio" name="choice"><p>Hate or Detest</p>
         <br />
@@ -30,10 +30,11 @@
     <script>        
         function vocabbeginnerstart() {
             //var frame=document.getElementById("frame_a");
+            var form=document.getElementById("options");
             document.close;
             document.open();
             document.write("Question 1: Define abhor."); 
-            document.getElementById("options").style.display="block";
+            
         };
         /* function multiplechoice() {
             var frame=document.getElementByName("choice");
