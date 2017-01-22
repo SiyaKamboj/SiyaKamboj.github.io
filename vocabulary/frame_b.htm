@@ -7,18 +7,7 @@
         <p>           Example: Majority of the people abhor a corrupt government.</p>        
     </ol>
     <button onclick="vocabbeginnerstart()">Start the Test</button> 
-                <form id=form1>
-                    <input type="radio" name="choice"><p>Hate or Detest</p>
-                    <br />
-                    <input type="radio" name="choice"><p>Lively/cheerful</p>
-                    <br />
-                    <input type="radio" name="choice"><p>Untrustworthy</p>
-                    <br />
-                    <input type="radio" name="choice"><p>None of the above</p>        
-                    <br />
-                 </form>
-                <input type="submit" value="Submit" id="submit" />
-                <br/><br/>    
+    
     <script>        
         function vocabbeginnerstart() {
             var frame=document.getElementById("frame_a");
@@ -33,7 +22,18 @@
             x.setAttribute("type", "radio");
         };
     </script>          
-                
+    <form id=form1 action=question.php> //added action.
+        <input type="radio" name="choice"><p>Hate or Detest</p>
+        <br />
+        <input type="radio" name="choice"><p>Lively/cheerful</p>
+        <br />
+        <input type="radio" name="choice"><p>Untrustworthy</p>
+        <br />
+        <input type="radio" name="choice"><p>None of the above</p>        
+        <br />
+     </form>
+    <input type="submit" value="Submit" id="submit" />
+    <br/><br/>                
                 
                  
        
