@@ -1,27 +1,22 @@
 <html>
-    <head>
-        <script>
-            document.getElementById("options").style.display="none";
-        </script>
-    </head>
-
 <body>
-    
+    <div id="initial">
     <ol>
         <li>Abhor (verb) .........................................Hate</li>
         <p>           Example: Majority of the people abhor a corrupt government.</p>        
     </ol>
     <!--<button onclick="vocabbeginnerstart()">Start the Test</button> !-->
     <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()" />
+    </div>
     <div id="options">
     <form> 
-        <input type="radio" name="choice"><p>Hate or Detest</p>
+        <input type="radio" name="choice" value="Hate or Detest" />
         <br />
-        <input type="radio" name="choice"><p>Lively/cheerful</p>
+        <input type="radio" name="choice" value="Lively/cheerful" />
         <br />
-        <input type="radio" name="choice"><p>Untrustworthy</p>
+        <input type="radio" name="choice" value="Untrustworthy" />
         <br />
-        <input type="radio" name="choice"><p>None of the above</p>        
+        <input type="radio" name="choice" value="None of the above" />    
         <br />
      </form>
     <input type="submit" value="Submit" id="submit" />
@@ -32,8 +27,7 @@
         function vocabbeginnerstart() {
             //var frame=document.getElementById("frame_a");
             var form=document.getElementById("options");
-            document.close;
-            document.open();
+            document.getElementById("initial").style.display="none";
             document.write("Question 1: Define abhor."); 
             form.style.display="block";
         };
