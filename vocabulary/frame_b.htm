@@ -1,8 +1,8 @@
 <html>
     <head>
-        <script>
+        <!--<script>
             document.getElementById("form1").style.display="none";
-        </script>
+        </script> !-->
     </head>
 
 <body>
@@ -27,7 +27,8 @@
             x.setAttribute("type", "radio");
         };
     </script>          
-    <form id=form1> 
+    <div id="form1" style="display:none;" class="answer_list" >
+    <form> 
         <input type="radio" name="choice"><p>Hate or Detest</p>
         <br />
         <input type="radio" name="choice"><p>Lively/cheerful</p>
@@ -39,6 +40,7 @@
      </form>
     <input type="submit" value="Submit" id="submit" />
     <br/><br/>                
+    </div>
                 
                  
        
