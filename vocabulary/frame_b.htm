@@ -7,30 +7,60 @@
         <p>           Example: Majority of the people abhor a corrupt government.</p>        
     </ol>
     
-    if <button onclick="vocabbeginnerstart()">Start the Test</button>
-    <script>
+    
+    <!--<script>
         function vocabbeginnerstart() {
             var frame=document.getElementById("frame_a");
             document.close;
             document.open();
-            document.write("Question 1: Define abhor.");                 
+            document.write("Question 1: Define abhor.");!-->                 
                 <html>
                 <form>
-                    <input type="radio" name="abhoranswer1">Hate or Detest</input>
+                    <input type="radio" name="choice">Hate or Detest</input>
                     <br />
-                    <input type="radio" name="abhoranswer2">Lively/cheerful</input>
+                    <input type="radio" name="choice">Lively/cheerful</input>
                     <br />
-                    <input type="radio" name="abhoranswer3">Untrustworthy</input>
+                    <input type="radio" name="choice">Untrustworthy</input>
                     <br />
-                    <input type="radio" name="abhoranswer4">none of the above</input>         
+                    <input type="radio" name="choice">none of the above</input>         
                     <br />
                  </form>
                 <input type="submit" value="Submit" id="submit" />
                 <br/><br/>
                 <p>Your next question is</p> 
               </html>         
-        }
-    </script>  
+       <!-- } !-->
+        <button onclick="submitAnswer()"Submit Answer</button> 
+        <script>
+            function submitAnswer() {
+                var radios = document.getElementsByName("choice");
+                var i = 0, len = radios.length;
+                var checked = false;
+                 var userAnswer;
+    
+            for( ; i < len; i++ ) {
+                if(radios[i].checked) {
+                    checked = true;
+                    userAnswer = radios[i].value;
+     }
+  } 
+  // if user click submit button without selecting any option, alert box should be say "please select choice answer".
+  if(!checked) {
+    alert("please select choice answer");
+    return;
+  }
+  // Correct answer
+  if(userAnswer === "Hate or Detest") {
+     alert("Answer is correct!");
+  }
+  // incorrect answer
+  else {
+     alert("Answer is wrong!");
+  }
+  
+}
+</script>
+   <!-- </script> !--> 
 
  </body>
 </html>
