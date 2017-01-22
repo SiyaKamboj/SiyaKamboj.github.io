@@ -6,14 +6,15 @@
         <li>Abhor (verb) .........................................Hate</li>
         <p>           Example: Majority of the people abhor a corrupt government.</p>        
     </ol>
-    
+    <button onclick="vocabbeginnerstart()">Start the Test</button>   
     
     <script>
         function vocabbeginnerstart() {
             var frame=document.getElementById("frame_a");
             document.close;
             document.open();
-            document.write("Question 1: Define abhor.");                
+            document.write("Question 1: Define abhor.");
+            document.write (
                 <html>
                 <form>
                     <input type="radio" name="choice">Hate or Detest</input>
@@ -28,10 +29,10 @@
                 <input type="submit" value="Submit" id="submit" />
                 <br/><br/>
                 <p>Your next question is</p> 
-              </html>         
+              </html> );       
        }
     </script>
-        <button onclick="submitAnswer()"Submit Answer</button> 
+        <!--<button onclick="submitAnswer()"Submit Answer</button> 
         <script>
             function submitAnswer() {
                 var radios = document.getElementsByName("choice");
@@ -59,8 +60,7 @@
      alert("Answer is wrong!");
   }
   
-}
-</script>
+}!-->
  
 
  </body>
