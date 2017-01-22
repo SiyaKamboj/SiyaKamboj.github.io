@@ -6,16 +6,16 @@
         <li>Abhor (verb) .........................................Hate</li>
         <p>           Example: Majority of the people abhor a corrupt government.</p>        
     </ol>
-    <button id ="start" type="button" onclick="Define Abhor">Start the Test</button>
-    <script>
-        document.getElementById('start').onclick = function() {
-            document.close;
-            documetn.open();
-            document.write('Define Abhor');
-        }
-    </script>      
     
-   
+    <button onclick="vocabbeginnerstart()">Start the Test</button>
+    <script>
+        function vocabbeginnerstart() {
+            var frame=document.getElementById("frame_a");
+            document.close;
+            document.open();
+            document.write("Question 1: Define abhor.");
+        }
+    </script>   
     <form>
         <input type="radio" name="abhoranswer1">Hate or Detest</input>
         <br />
