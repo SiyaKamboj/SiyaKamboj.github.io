@@ -9,13 +9,16 @@
     <button onclick="vocabbeginnerstart()">Start the Test</button>   
     
     <script>
+        var asked=0;
         function vocabbeginnerstart() {
             var frame=document.getElementById("frame_a");
             document.close;
             document.open();
-            document.write("Question 1: Define abhor.");
-            document.write (
-                <html>
+            document.write("Question 1: Define abhor."); 
+            var asked=1;
+        }
+        if (asked=1) {                
+            <html>
                 <form>
                     <input type="radio" name="choice">Hate or Detest</input>
                     <br />
@@ -29,8 +32,9 @@
                 <input type="submit" value="Submit" id="submit" />
                 <br/><br/>
                 <p>Your next question is</p> 
-              </html> );       
-       }
+              </html>  
+        }
+       
     </script>
         <!--<button onclick="submitAnswer()"Submit Answer</button> 
         <script>
