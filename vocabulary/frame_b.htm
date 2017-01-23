@@ -30,9 +30,26 @@
             document.getElementById("initial").style.display="none";
             document.getElementById("options").style.display="block";
         };
-        /* function submitanswer() {
-            
-        };*/ 
+        function submitanswer() {
+          var radios = document.getElementsByName('q1choices');
+          var correctans = 0;
+          for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                // do whatever you want with the checked radio
+                var selection = radios[i].value;
+                if i == correctans {
+                    var textnode = document.createTextNode("Correct! :)");
+                }
+                else{
+                    var textnode = document.createTextNode("Wrong. :(");
+                }
+                //alert(selection)
+                document.appendChild(textnode)
+                // only one radio can be logically checked, don't check the rest
+                break;
+            }
+        }
+        }; 
     </script>          
 </body>
 </html>
