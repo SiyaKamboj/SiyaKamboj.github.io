@@ -11,16 +11,16 @@
     <div id="options" style="display:none;">
         <p>Question 1: What is the meaning of "ABHOR"?</p>
     <form> 
-        <input type="radio" name="q1choices" value="1" id="q1a1" /><label for="q1a1"> Hate or Detest </label>
+        <input type="radio" name="q1choices" value="q1a0" /><label for="q1a0"> Hate or Detest</label>
         <br />
-        <input type="radio" name="q1choices" value="2" id="q1a2" /><label for="q1a2">Lively or cheerful </label>
+        <input type="radio" name="q1choices" value="q1a1" /><label for="q1a1">Lively or cheerful</label>
         <br />
-        <input type="radio" name="q1choices" value="3" id="q1a3"  /><label for="q1a3">Untrustworthy</label>
+        <input type="radio" name="q1choices" value="q1a2" /><label for="q1a2">Untrustworthy</label>
         <br />
-        <input type="radio" name="q1choices" value="4" id="q1a4" /><label for="q1a4">None of the above</label>
+        <input type="radio" name="q1choices" value="q1a3" /><label for="q1a3">None of the above  </label>
         <br />
      </form>
-    <input type="submit" value="Submit" id="submit" onclick="submitandcheck()" />
+    <input type="submit" value="Submit" id="submit" />
     <br/><br/>                
     </div>
     <script>    
@@ -30,36 +30,12 @@
             document.getElementById("initial").style.display="none";
             document.getElementById("options").style.display="block";
         };
-        //Submit the option, check if it's right and then display if the answer was right or wrong.
-        function submitandcheck() {
-              var radios = document.getElementsByName('q1choices');
-              var correctans = 0;
-              for (var i = 0, length = radios.length; i < length; i++) {
-                if (radios[i].checked) {
-                    // do whatever you want with the checked radio
-                    var selection = radios[i].value;
-                    if i == correctans {
-                        var textnode = document.createTextNode("Correct! :)");
-                    }
-                    else{
-                        var textnode = document.createTextNode("Wrong. :(");
-                    }
-                    //alert(selection)
-                    document.appendChild(textnode)
-                    // only one radio can be logically checked, don't check the rest
-                    break;
-                }
-            }
-        };
-        /* function multiplechoice() {
-            var frame=document.getElementByName("choice");
-            var x = document.createElement("INPUT");
-            x.setAttribute("type", "radio");
+        /* function submitanswer() {
+            
         };*/ 
     </script>          
-    
-                
-                 
+</body>
+</html>
        
   
         <!--<button onclick="submitAnswer()"Submit Answer</button> 
@@ -90,9 +66,9 @@
      alert("Answer is wrong!");
   }
   
-}!-->
- 
+};
+</script>
 
  </body>
-</html>
+</html> !-->
  
