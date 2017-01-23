@@ -37,16 +37,14 @@
           for (var i = 0, length = radios.length; i < length; i++) {
             if (radios[i].checked) {
                 // do whatever you want with the checked radio
-                var selection = radios[i].value;
+                var useranswer = radios[i].value;
                 if (i == correctans) {
-                    var textnode = document.createTextNode("Correct! :)");
+                    var textnode = "Correct! :)";
                 }
                 else {
-                    var textnode = document.createTextNode("Wrong. :(");
+                    var textnode = "Wrong. :(";
                 }
-                //alert(selection)
-                document.appendChild(textnode)
-                // only one radio can be logically checked, don't check the rest
+                document.write(textnode)
                 break;
             }
         }
