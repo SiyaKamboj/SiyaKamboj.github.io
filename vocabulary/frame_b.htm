@@ -21,7 +21,8 @@
         <br />
      </form>
     <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
-    <br/><br/>                
+    <br/><br/>   
+        <div id="ansNextQ"></div>
     </div>
     <script>    
         //document.getElementById("options").style.display="none";
@@ -44,7 +45,12 @@
                 else {
                     var textnode = "Wrong. :(";
                 }
-                document.write(textnode)
+                myButton = document.createElement("input");
+                myButton.type = "Next Question";
+                myButton.value = "Next Question";
+                placeHolder = document.getElementById("ansNextQ");
+                placeholder.innerHTML = textnode;
+                placeHolder.appendChild(myButton);
                 break;
             }
         }
