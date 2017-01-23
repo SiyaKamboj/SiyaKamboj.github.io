@@ -48,9 +48,8 @@
                 myButton = document.createElement("input");
                 myButton.type = "Next Question";
                 myButton.value = "Next Question";
-                var placeHolder = document.getElementById("ansNextQ");
-                placeholder.innerHTML = textnode;
-                placeHolder.appendChild(myButton);
+                document.getElementById("ansNextQ").innerHTML = textnode;
+                document.getElementById("ansNextQ").appendChild(myButton);
                 break;
             }
         }
