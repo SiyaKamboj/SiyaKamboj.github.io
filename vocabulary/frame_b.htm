@@ -20,7 +20,7 @@
         <input type="radio" name="q1choices" id="q1a3" /><label for="q1a3">None of the above</label>
         <br />
      </form>
-    <input type="submit" value="Submit" id="submit" />
+    <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
     <br/><br/>                
     </div>
     <script>    
@@ -30,17 +30,18 @@
             document.getElementById("initial").style.display="none";
             document.getElementById("options").style.display="block";
         };
+        
         function submitanswer() {
-          var radios = document.getElementsByName('q1choices');
+          /* var radios = document.getElementsByName('q1choices');
           var correctans = 0;
           for (var i = 0, length = radios.length; i < length; i++) {
             if (radios[i].checked) {
                 // do whatever you want with the checked radio
                 var selection = radios[i].value;
-                if i == correctans {
+                if (i == correctans) {
                     var textnode = document.createTextNode("Correct! :)");
                 }
-                else{
+                else {
                     var textnode = document.createTextNode("Wrong. :(");
                 }
                 //alert(selection)
@@ -49,7 +50,7 @@
                 break;
             }
         }
-        }; 
+        };*/ 
     </script>          
 </body>
 </html>
