@@ -48,7 +48,9 @@
                 nextButton = document.createElement("input");
                 nextButton.type = "button";
                 nextButton.value = "Next Question";
-                document.getElementById("ansNextQ").innerHTML = textnode + <br />;
+                document.getElementById("ansNextQ").innerHTML = textnode;
+                linebreak = document.createElement("br");
+                document.getElementById("ansNextQ").appendChild(linebreak);
                 document.getElementById("ansNextQ").appendChild(nextButton);
                 break;
             }
