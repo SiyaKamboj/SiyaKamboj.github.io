@@ -81,6 +81,7 @@
         //document.getElementById("options").style.display="none";
         function vocabbeginnerstart() {
             //var frame=document.getElementById("frame_a");
+            var score=0;
             document.getElementById("initial").style.display="none";
             document.getElementById("Abhor1").style.display="block";            
         }
@@ -96,12 +97,10 @@
                 };
            document.getElementById(questions[question_number]).style.display="none";
           
-                  if(question_number<4) {
-                      question_number=question_number+1;
-                  }
-                  else {
-                      document.getElementById("EndScore").innerHTML= score;
-                  };
+              if(question_number<4) {
+                  question_number=question_number+1;
+              };
+              document.getElementById("EndScore").innerHTML= score;
              document.getElementById(questions[question_number]).style.display="block";
                   
               };
