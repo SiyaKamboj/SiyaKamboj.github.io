@@ -24,7 +24,8 @@
     <br/><br/>   
         <div id="ansNextQ"></div>
     </div>
-    <script>    
+    <script> 
+        var score=0;
         //document.getElementById("options").style.display="none";
         function vocabbeginnerstart() {
             //var frame=document.getElementById("frame_a");
@@ -41,9 +42,11 @@
                 var useranswer = radios[i].value;
                 if (i == correctans) {
                     var textnode = "Correct! :)";
+                    score=score+10;
                 }
                 else {
                     var textnode = "Wrong. :(";
+                    score=0;
                 }
                 nextButton = document.createElement("input");
                 nextButton.type = "button";
@@ -61,24 +64,7 @@
 </html>
        
   
-        <!--<button onclick="submitAnswer()"Submit Answer</button> 
-        <script>
-            function submitAnswer() {
-                var radios = document.getElementsByName("choice");
-                var i = 0, len = radios.length;
-                var checked = false;
-                 var userAnswer;
-    
-            for( ; i < len; i++ ) {
-                if(radios[i].checked) {
-                    checked = true;
-                    userAnswer = radios[i].value;
-     }
-  } 
-  // if user click submit button without selecting any option, alert box should be say "please select choice answer".
-  if(!checked) {
-    alert("please select choice answer");
-    return;
+        
   }
   // Correct answer
   if(userAnswer === "Hate or Detest") {
