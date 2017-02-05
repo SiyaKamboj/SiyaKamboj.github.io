@@ -86,15 +86,13 @@
         }
         
         function submitanswer() {
-          var radios = document.getElementsByName(choices[question_number]);
-          
+          var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
                 // do whatever you want with the checked radio
                 var useranswer = radios[i].value;
-                if (i == correctans[question_number]) {                   
-                    
-                    score=score+10;
+                if (i == correctans[question_number]) {
+                    score += 10;
                 };
            document.getElementById(questions[question_number]).style.display="none";
           
@@ -102,20 +100,17 @@
                       question_number=question_number+1;
                   }
                   else {
-                      
-                      //var text = "Congratulations! You finished the test. Your score is ";
                       document.getElementById("EndScore").innerHTML= score;
-                      /*document.getElementById("Ending").style.display="block";
-                      linebreak = document.createElement("br");
-                      document.getElementById("Ending").appendChild(linebreak);*/
                   };
              document.getElementById(questions[question_number]).style.display="block";
-           
                   
               };
           };
                     
            };
+        for(var b in window) { 
+            if(window.hasOwnProperty(b)) console.log(b); 
+        };
                 
               
                /* nextButton = document.createElement("input");
