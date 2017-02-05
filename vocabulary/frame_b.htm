@@ -43,11 +43,11 @@
         <div id="Esoteric1" style="display:none;">
             <p>What is the meaning of "Esoteric"?</p>
              <form> 
-                <input type="radio" name="q3choices" id="q3a0" /><label for="q3a0">Only understood by a minority</label>
+                <input type="radio" name="q3choices" id="q3a0" /><label for="q3a0">Overly dramatic</label>
                 <br />
                 <input type="radio" name="q3choices" id="q3a1" /><label for="q3a1">Picteresque</label>
                 <br />
-                <input type="radio" name="q3choices" id="q3a2" /><label for="q3a2">Overly dramatic</label>
+                <input type="radio" name="q3choices" id="q3a2" /><label for="q3a2">Only understood by a minority</label>
                 <br />
                 <input type="radio" name="q3choices" id="q3a3" /><label for="q3a3">None of the above</label>
                 <br />
@@ -74,6 +74,10 @@
        </div>
        
     <script> 
+        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1"];
+        var correctans = [0,0, 2, 3]; 
+        var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices'];
+        var question_number=0;
         var score=0;
         //document.getElementById("options").style.display="none";
         function vocabbeginnerstart() {
@@ -83,18 +87,22 @@
         }
         
         function submitanswer() {
-          var radios = document.getElementsByName('q1choices');
-          var correctans = 0;
+          var radios = document.getElementsByName(choices[question_number]);
+          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
                 // do whatever you want with the checked radio
                 var useranswer = radios[i].value;
-                if (i == correctans) {                   
+                if (i == correctans[question_number]) {                   
                     
                     score=score+10;
                 };
-           document.getElementById("Abhor1").style.display="none";
-           document.getElementById("Perfidious1").style.display="block";
+           document.getElementById(questions[question_number]).style.display="none";
+                  if(question_number<4) {
+                      question_number=question_number+1;
+                  };                  
+           document.getElementById(questions[question_number]).style.display="block";
+                  
               };
           };
                     
