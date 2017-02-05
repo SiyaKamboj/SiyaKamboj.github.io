@@ -37,17 +37,31 @@
           var radios = document.getElementsByName('q1choices');
           var correctans = 0;
           for (var i = 0, length = radios.length; i < length; i++) {
-            if (radios[i].checked) {
+              if (radios[i].checked) {
                 // do whatever you want with the checked radio
                 var useranswer = radios[i].value;
-                if (i == correctans) {
-                    var textnode = "Correct! :)";
+                if (i == correctans) {                   
+                    
                     score=score+10;
-                }
-                else {
-                    var textnode = "Wrong. :(";
-                    score=0;
-                }
+                };
+              <div id="options" style="display:none;">
+            <p>Question 1: What is the meaning of "perfidious"?</p>
+             <form> 
+                <input type="radio" name="q1choices" id="q1a0" /><label for="q1a0">Untrustworthy</label>
+                <br />
+                <input type="radio" name="q1choices" id="q1a1" /><label for="q1a1">Attack</label>
+                <br />
+                <input type="radio" name="q1choices" id="q1a2" /><label for="q1a2">An object thought to bring good luck</label>
+                <br />
+                <input type="radio" name="q1choices" id="q1a3" /><label for="q1a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+            <br/><br/>   
+            <div id="ansNextQ"></div>
+            </div>
+                
+              
                 nextButton = document.createElement("input");
                 nextButton.type = "button";
                 nextButton.value = "Next Question";
@@ -59,23 +73,11 @@
             }
         }
         }; 
-    </script>          
-</body>
-</html>
+  
        
   
         
-  }
-  // Correct answer
-  if(userAnswer === "Hate or Detest") {
-     alert("Answer is correct!");
-  }
-  // incorrect answer
-  else {
-     alert("Answer is wrong!");
-  }
   
-};
 </script>
 
  </body>
