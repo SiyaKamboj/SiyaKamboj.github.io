@@ -8,7 +8,7 @@
     <!--<button onclick="vocabbeginnerstart()">Start the Test</button> !-->
     <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()" />
     </div>
-    <div id="options" style="display:none;">
+    <div id="Abhor1" style="display:none;">
         <p>Question 1: What is the meaning of "ABHOR"?</p>
     <form> 
         <input type="radio" name="q1choices" id="q1a0" /><label for="q1a0"> Hate or Detest</label>
@@ -24,27 +24,7 @@
     <br/><br/>   
         <div id="ansNextQ"></div>
     </div>
-    <script> 
-        var score=0;
-        //document.getElementById("options").style.display="none";
-        function vocabbeginnerstart() {
-            //var frame=document.getElementById("frame_a");
-            document.getElementById("initial").style.display="none";
-            document.getElementById("options").style.display="block";
-        }
-        
-        function submitanswer() {
-          var radios = document.getElementsByName('q1choices');
-          var correctans = 0;
-          for (var i = 0, length = radios.length; i < length; i++) {
-              if (radios[i].checked) {
-                // do whatever you want with the checked radio
-                var useranswer = radios[i].value;
-                if (i == correctans) {                   
-                    
-                    score=score+10;
-                };
-              <div id="options" style="display:none;">
+    <div id="Perfidious1" style="display:none;">
             <p>Question 1: What is the meaning of "perfidious"?</p>
              <form> 
                 <input type="radio" name="q1choices" id="q1a0" /><label for="q1a0">Untrustworthy</label>
@@ -59,18 +39,43 @@
             <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
             <br/><br/>   
             <div id="ansNextQ"></div>
-            </div>
+       </div>
+    <script> 
+        var score=0;
+        //document.getElementById("options").style.display="none";
+        function vocabbeginnerstart() {
+            //var frame=document.getElementById("frame_a");
+            document.getElementById("initial").style.display="none";
+            document.getElementById("Abhor1").style.display="block";            
+        }
+        
+        function submitanswer() {
+          var radios = document.getElementsByName('q1choices');
+          var correctans = 0;
+          for (var i = 0, length = radios.length; i < length; i++) {
+              if (radios[i].checked) {
+                // do whatever you want with the checked radio
+                var useranswer = radios[i].value;
+                if (i == correctans) {                   
+                    
+                    score=score+10;
+                };
+           document.getElementbyId("Abhor1").style.display="none";
+           document.getElementbyId("Perfidious1").style.display="block";
+                    
+                };
                 
               
-                nextButton = document.createElement("input");
+               /* nextButton = document.createElement("input");
                 nextButton.type = "button";
                 nextButton.value = "Next Question";
                 document.getElementById("ansNextQ").innerHTML = textnode;
                 linebreak = document.createElement("br");
                 document.getElementById("ansNextQ").appendChild(linebreak);
                 document.getElementById("ansNextQ").appendChild(nextButton);
-                break;
+                break;*/
             }
+          
         }
         }; 
   
