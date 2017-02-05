@@ -6,7 +6,7 @@
         <p>           Example: Majority of the people abhor a corrupt government.</p>        
     </ol>
     <!--<button onclick="vocabbeginnerstart()">Start the Test</button> !-->
-    <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()" />
+    <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()"/>
     </div>
     <div id="Abhor1" style="display:none;">
         <p>Question 1: What is the meaning of "ABHOR"?</p>
@@ -47,7 +47,7 @@
             //var frame=document.getElementById("frame_a");
             document.getElementById("initial").style.display="none";
             document.getElementById("Abhor1").style.display="block";            
-        };
+        }
         
         function submitanswer() {
           var radios = document.getElementsByName('q1choices');
@@ -62,8 +62,10 @@
                 };
            document.getElementbyId("Abhor1").style.display="none";
            document.getElementbyId("Perfidious1").style.display="block";
+              };
+          };
                     
-                };
+           };
                 
               
                /* nextButton = document.createElement("input");
@@ -74,10 +76,7 @@
                 document.getElementById("ansNextQ").appendChild(linebreak);
                 document.getElementById("ansNextQ").appendChild(nextButton);
                 break;*/
-            }
-          
-        }
-        }; 
+            
   
        
   
