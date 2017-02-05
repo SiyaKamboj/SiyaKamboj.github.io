@@ -105,8 +105,12 @@
                       question_number=question_number+1;
                   }
                   else {
-                      document.getElementById("Ending").innerHTML= "Congratulations! You finished the test. Your score is " + score.toString();
+                      
+                      var text = "Congratulations! You finished the test. Your score is ";
+                      document.getElementById("Ending").innerHTML= text.concat(score.toString());
                       document.getElementById("Ending").style.display="block";
+                      linebreak = document.createElement("br");
+                      document.getElementById("Ending").appendChild(linebreak);
                   };
              document.getElementById(questions[question_number]).style.display="block";
            
