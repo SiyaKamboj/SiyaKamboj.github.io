@@ -25,7 +25,7 @@
         <div id="ansNextQ"></div>
     </div>
     <div id="Perfidious1" style="display:none;">
-            <p> What is the meaning of "perfidious"?</p>
+            <p> What is the meaning of "PERIFIDIOUS"?</p>
              <form> 
                 <input type="radio" name="q2choices" id="q2a0" /><label for="q2a0">Untrustworthy</label>
                 <br />
@@ -41,7 +41,7 @@
             <div id="ansNextQ"></div>
        </div>
         <div id="Esoteric1" style="display:none;">
-            <p>What is the meaning of "Esoteric"?</p>
+            <p>What is the meaning of "ESOTERIC"?</p>
              <form> 
                 <input type="radio" name="q3choices" id="q3a0" /><label for="q3a0">Overly dramatic</label>
                 <br />
@@ -57,7 +57,7 @@
             <div id="ansNextQ"></div>
        </div>
        <div id="Obdurate1" style="display:none;">
-            <p> What is the meaning of "obduratre"?</p>
+            <p> What is the meaning of "OBDURATE"?</p>
              <form> 
                 <input type="radio" name="q4choices" id="q4a0" /><label for="q4a0">Casual/not being seriosu about something taken seriously by others</label>
                 <br />
@@ -72,9 +72,11 @@
             <br/><br/>   
             <div id="ansNextQ"></div>
        </div>
+       <div id="Ending">
+    </div>
        
     <script> 
-        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1"];
+        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1", "Ending"];
         var correctans = [0,0, 2, 3]; 
         var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices'];
         var question_number=0;
@@ -98,10 +100,15 @@
                     score=score+10;
                 };
            document.getElementById(questions[question_number]).style.display="none";
+          
                   if(question_number<4) {
                       question_number=question_number+1;
-                  };                  
-           document.getElementById(questions[question_number]).style.display="block";
+                  }
+                  else {
+                      document.getElementById("Ending").innerHTML= "Congratulations! You finished the test. Your score is" + score;
+                  };
+             document.getElementById(questions[question_number]).style.display="block";
+           
                   
               };
           };
