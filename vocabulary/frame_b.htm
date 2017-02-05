@@ -9,7 +9,7 @@
     <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()"/>
     </div>
     <div id="Abhor1" style="display:none;">
-        <p>Question 1: What is the meaning of "ABHOR"?</p>
+        <p> What is the meaning of "ABHOR"?</p>
     <form> 
         <input type="radio" name="q1choices" id="q1a0" /><label for="q1a0"> Hate or Detest</label>
         <br />
@@ -25,21 +25,54 @@
         <div id="ansNextQ"></div>
     </div>
     <div id="Perfidious1" style="display:none;">
-            <p>Question 1: What is the meaning of "perfidious"?</p>
+            <p> What is the meaning of "perfidious"?</p>
              <form> 
-                <input type="radio" name="q1choices" id="q1a0" /><label for="q1a0">Untrustworthy</label>
+                <input type="radio" name="q2choices" id="q2a0" /><label for="q2a0">Untrustworthy</label>
                 <br />
-                <input type="radio" name="q1choices" id="q1a1" /><label for="q1a1">Attack</label>
+                <input type="radio" name="q2choices" id="q2a1" /><label for="q2a1">Attack</label>
                 <br />
-                <input type="radio" name="q1choices" id="q1a2" /><label for="q1a2">An object thought to bring good luck</label>
+                <input type="radio" name="q2choices" id="q2a2" /><label for="q2a2">An object thought to bring good luck</label>
                 <br />
-                <input type="radio" name="q1choices" id="q1a3" /><label for="q1a3">None of the above</label>
+                <input type="radio" name="q2choices" id="q2a3" /><label for="q2a3">None of the above</label>
                 <br />
             </form>
             <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
             <br/><br/>   
             <div id="ansNextQ"></div>
        </div>
+        <div id="Esoteric1" style="display:none;">
+            <p>What is the meaning of "Esoteric"?</p>
+             <form> 
+                <input type="radio" name="q3choices" id="q3a0" /><label for="q3a0">Only understood by a minority</label>
+                <br />
+                <input type="radio" name="q3choices" id="q3a1" /><label for="q3a1">Picteresque</label>
+                <br />
+                <input type="radio" name="q3choices" id="q3a2" /><label for="q3a2">Overly dramatic</label>
+                <br />
+                <input type="radio" name="q3choices" id="q3a3" /><label for="q3a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+            <br/><br/>   
+            <div id="ansNextQ"></div>
+       </div>
+       <div id="obdurate" style="display:none;">
+            <p> What is the meaning of "obduratre"?</p>
+             <form> 
+                <input type="radio" name="q4choices" id="q4a0" /><label for="q4a0">Casual/not being seriosu about something taken seriously by others</label>
+                <br />
+                <input type="radio" name="q4choices" id="q4a1" /><label for="q4a1">Fail to fulfill a duty</label>
+                <br />
+                <input type="radio" name="q4choices" id="q4a2" /><label for="q4a2">Praise</label>
+                <br />
+                <input type="radio" name="q4choices" id="q4a3" /><label for="q4a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+            <br/><br/>   
+            <div id="ansNextQ"></div>
+       </div>
+       
     <script> 
         var score=0;
         //document.getElementById("options").style.display="none";
