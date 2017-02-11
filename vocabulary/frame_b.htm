@@ -70,19 +70,47 @@
         <div id="Abdicate1" style="display:none;">
             <p> What is the meaning of "ABDICATE"?</p>
              <form> 
-                <input type="radio" name="q5choices" id="q5a0" /><label for="q4a0">Stubborn/impolite</label>
+                <input type="radio" name="q5choices" id="q5a0" /><label for="q5a0">Stubborn/impolite</label>
                 <br />
-                <input type="radio" name="q5choices" id="q5a1" /><label for="q4a1">Renounce your throne/Fail to fulfill a duty</label>
+                <input type="radio" name="q5choices" id="q5a1" /><label for="q5a1">Renounce your throne/Fail to fulfill a duty</label>
                 <br />
-                <input type="radio" name="q5choices" id="q5a2" /><label for="q4a2">Travelling through air</label>
+                <input type="radio" name="q5choices" id="q5a2" /><label for="q5a2">Travelling through air</label>
                 <br />
-                <input type="radio" name="q5choices" id="q5a3" /><label for="q4a3">None of the above</label>
+                <input type="radio" name="q5choices" id="q5a3" /><label for="q5a3">None of the above</label>
                 <br />
             </form>
             <input type="submit" value="Submit" id="submit4" onclick="submitanswer()" />
             
        </div>
         <div id="Idyllic1" style="display:none;">
+            <p> What is the meaning of "IDYLLIC"?</p>
+             <form> 
+                <input type="radio" name="q6choices" id="q6a0" /><label for="q6a0">Idolize/Adore</label>
+                <br />
+                <input type="radio" name="q6choices" id="q6a1" /><label for="q6a1">Only understood by a minority</label>
+                <br />
+                <input type="radio" name="q6choices" id="q6a2" /><label for="q6a2">Picturesque</label>
+                <br />
+                <input type="radio" name="q6choices" id="q6a3" /><label for="q6a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
+            
+       </div>
+        <div id="Assail1" style="display:none;">
+            <p> What is the meaning of "ASSSAIL"?</p>
+             <form> 
+                <input type="radio" name="q7choices" id="q7a0" /><label for="q7a0">Attack/criticize</label>
+                <br />
+                <input type="radio" name="q7choices" id="q7a1" /><label for="q7a1">overly dramatic</label>
+                <br />
+                <input type="radio" name="q7choices" id="q7a2" /><label for="q7a2">subtle differences</label>
+                <br />
+                <input type="radio" name="q7choices" id="q7a3" /><label for="q7a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
+         <div id="Idyllic1" style="display:none;">
             <p> What is the meaning of "IDYLLIC"?</p>
              <form> 
                 <input type="radio" name="q6choices" id="q6a0" /><label for="q5a0">Idolize/Adore</label>
@@ -97,14 +125,16 @@
             <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
             
        </div>
+            
+       </div>
        <div id="Ending" style="display:none;"> 
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        </div>
        
     <script> 
-        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1","Abdicate1", "Idyllic1", "Ending"];
-        var correctans = [0,0, 2, 3, 1, 2]; 
+        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1","Abdicate1", "Idyllic1", "Assail1",  "Ending"];
+        var correctans = [0,0, 2, 3, 1, 2, 0]; 
         var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices', 'q5choices', 'q6choices'];
         var question_number=0;
         var score=0;
@@ -127,7 +157,7 @@
                 };
            document.getElementById(questions[question_number]).style.display="none";
           
-              if(question_number<4) {
+              if(question_number<6) {
                   question_number=question_number+1;
               };
               document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
