@@ -34,7 +34,7 @@
                 <input type="radio" name="q2choices" id="q2a3" /><label for="q2a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+            <input type="submit" value="Submit" id="submit2" onclick="submitanswer()" />
             
        </div>
         <div id="Esoteric1" style="display:none;">
@@ -49,7 +49,7 @@
                 <input type="radio" name="q3choices" id="q3a3" /><label for="q3a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+            <input type="submit" value="Submit" id="submit3" onclick="submitanswer()" />
             
        </div>
        <div id="Obdurate1" style="display:none;">
@@ -64,7 +64,37 @@
                 <input type="radio" name="q4choices" id="q4a3" /><label for="q4a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+            <input type="submit" value="Submit" id="submit4" onclick="submitanswer()" />
+            
+       </div>        
+        <div id="Abdicate1" style="display:none;">
+            <p> What is the meaning of "ABDICATE"?</p>
+             <form> 
+                <input type="radio" name="q5choices" id="q5a0" /><label for="q4a0">Stubborn/impolite</label>
+                <br />
+                <input type="radio" name="q5choices" id="q5a1" /><label for="q4a1">Renounce your throne/Fail to fulfill a duty</label>
+                <br />
+                <input type="radio" name="q5choices" id="q5a2" /><label for="q4a2">Travelling through air</label>
+                <br />
+                <input type="radio" name="q5choices" id="q5a3" /><label for="q4a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit4" onclick="submitanswer()" />
+            
+       </div>
+        <div id="Idyllic1" style="display:none;">
+            <p> What is the meaning of "IDYLLIC"?</p>
+             <form> 
+                <input type="radio" name="q6choices" id="q6a0" /><label for="q5a0">Idolize/Adore</label>
+                <br />
+                <input type="radio" name="q6choices" id="q6a1" /><label for="q5a1">Only understood by a minority</label>
+                <br />
+                <input type="radio" name="q6choices" id="q6a2" /><label for="q5a2">Picturesque</label>
+                <br />
+                <input type="radio" name="q6choices" id="q6a3" /><label for="q5a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
             
        </div>
        <div id="Ending" style="display:none;"> 
@@ -73,9 +103,9 @@
        </div>
        
     <script> 
-        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1", "Ending"];
-        var correctans = [0,0, 2, 3]; 
-        var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices'];
+        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1",'Abdicate1", "Idyllic1", "Ending"];
+        var correctans = [0,0, 2, 3, 1, 2]; 
+        var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices', 'q5choices', 'q6choices'];
         var question_number=0;
         var score=0;
         //document.getElementById("options").style.display="none";
