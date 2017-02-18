@@ -79,7 +79,7 @@
                 <input type="radio" name="q5choices" id="q5a3" /><label for="q5a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit4" onclick="submitanswer()" />
+            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
             
        </div>
         <div id="Idyllic1" style="display:none;">
@@ -94,7 +94,7 @@
                 <input type="radio" name="q6choices" id="q6a3" /><label for="q6a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
+            <input type="submit" value="Submit" id="submit6" onclick="submitanswer()" />
             
        </div>
         <div id="Assail1" style="display:none;">
@@ -109,33 +109,76 @@
                 <input type="radio" name="q7choices" id="q7a3" /><label for="q7a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
-         <div id="Idyllic1" style="display:none;">
-            <p> What is the meaning of "IDYLLIC"?</p>
+            <input type="submit" value="Submit" id="submit7" onclick="submitanswer()" />       
+            
+       </div>
+        <div id="Nuance1" style="display:none;">
+            <p> What is the meaning of "NUANCE"?</p>
              <form> 
-                <input type="radio" name="q6choices" id="q6a0" /><label for="q5a0">Idolize/Adore</label>
+                <input type="radio" name="q8choices" id="q8a0" /><label for="q8a0">A lively/cheerful event</label>
                 <br />
-                <input type="radio" name="q6choices" id="q6a1" /><label for="q5a1">Only understood by a minority</label>
+                <input type="radio" name="q8choices" id="q8a1" /><label for="q8a1">Opposites</label>
                 <br />
-                <input type="radio" name="q6choices" id="q6a2" /><label for="q5a2">Picturesque</label>
+                <input type="radio" name="q8choices" id="q8a2" /><label for="q8a2">Subtle Differences</label>
                 <br />
-                <input type="radio" name="q6choices" id="q6a3" /><label for="q5a3">None of the above</label>
+                <input type="radio" name="q8choices" id="q8a3" /><label for="q8a3">None of the above</label>
                 <br />
             </form>
-            <input type="submit" value="Submit" id="submit5" onclick="submitanswer()" />
+            <input type="submit" value="Submit" id="submit8" onclick="submitanswer()" />
+    </div>
             
+            <div id="Talisman1" style="display:none;">
+            <p> What is the meaning of "TALISMAN"?</p>
+             <form> 
+                <input type="radio" name="q9choices" id="q9a0" /><label for="q9a0">A valuable object</label>
+                <br />
+                <input type="radio" name="q9choices" id="q9a1" /><label for="q9a1">Praise</label>
+                <br />
+                <input type="radio" name="q9choices" id="q9a2" /><label for="q9a2">Casual</label>
+                <br />
+                <input type="radio" name="q9choices" id="q9a3" /><label for="q9a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit9" onclick="submitanswer()" />                     
        </div>
-            
+    
+        <div id="Airy1" style="display:none;">
+            <p> What is the meaning of "AIRY"?</p>
+             <form> 
+                <input type="radio" name="q10choices" id="q10a0" /><label for="q10a0">Spacious/Casual</label>
+                <br />
+                <input type="radio" name="q10choices" id="q10a1" /><label for="q10a1">Cluttered</label>
+                <br />
+                <input type="radio" name="q10choices" id="q10a2" /><label for="q10a2">Formal/Professional</label>
+                <br />
+                <input type="radio" name="q10choices" id="q10a3" /><label for="q10a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit10" onclick="submitanswer()" />           
        </div>
+        <!--<div id="" style="display:none;">
+            <p> What is the meaning of "AIRY"?</p>
+             <form> 
+                <input type="radio" name="q10choices" id="q10a0" /><label for="q10a0">Spacious/Casual</label>
+                <br />
+                <input type="radio" name="q10choices" id="q10a1" /><label for="q10a1">Cluttered</label>
+                <br />
+                <input type="radio" name="q10choices" id="q10a2" /><label for="q10a2">Formal/Professional</label>
+                <br />
+                <input type="radio" name="q10choices" id="q10a3" /><label for="q10a3">None of the above</label>
+                <br />
+            </form>
+            <input type="submit" value="Submit" id="submit10" onclick="submitanswer()" />           
+       </div>!-->
        <div id="Ending" style="display:none;"> 
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        </div>
        
     <script> 
-        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1","Abdicate1", "Idyllic1", "Assail1",  "Ending"];
-        var correctans = [0,0, 2, 3, 1, 2, 0]; 
-        var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices', 'q5choices', 'q6choices'];
+        var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1","Abdicate1", "Idyllic1", "Assail1", "Nuance1", "Talisman1", "Airy1"  "Ending"];
+        var correctans = [0,0, 2, 3, 1, 2, 0, 2, 3, 0]; 
+        var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices', 'q5choices', 'q6choices', 'q7choices', 'q8choices', 'q9choices','q10choices' ];
         var question_number=0;
         var score=0;
         //document.getElementById("options").style.display="none";
