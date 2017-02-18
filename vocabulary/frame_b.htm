@@ -8,6 +8,8 @@
     <!--<button onclick="vocabbeginnerstart()">Start the Test</button> !-->
     <input type="button" name="answer" value="Start the Test" onclick="vocabbeginnerstart()"/>
     </div>
+    <form id="Beginner">                    
+    
     <div id="Abhor1" style="display:none;">
         <p> What is the meaning of "ABHOR"?</p>
     <form> 
@@ -233,11 +235,13 @@
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        </div>
+    </form>
        
     <script> 
         var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1","Abdicate1", "Idyllic1", "Assail1", "Nuance1", "Talisman1", "Airy1", "Boisterous1", "Adduce1","Histrionic1", "Plaudit1", "Aeronautics1", "Ending"];
         var correctans = [0,0, 2, 3, 1, 2, 0, 2, 3, 0, 2, 0, 3, 0, 1]; 
         var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices', 'q5choices', 'q6choices', 'q7choices', 'q8choices', 'q9choices','q10choices', 'q11choices', 'q12choices', 'q13choices', 'q14choices', 'q15choices' ];
+        var wrongans=[ ];
         var question_number=0;
         var score=0;
         //document.getElementById("options").style.display="none";
@@ -256,7 +260,8 @@
                 var useranswer = radios[i].value;
                 if (i == correctans[question_number]) {
                     score += 10;
-                };
+                };               
+
            document.getElementById(questions[question_number]).style.display="none";
           
               if(question_number<16) {
