@@ -235,6 +235,10 @@
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        </div>
+     <div id="Wrong" style="display:none;">
+         <p> Sorry, that is incorrect. The correct answer is <br> </p>
+         <div id="WrongAns"></div>
+    </div>
     
        
     <script> 
@@ -260,7 +264,11 @@
                 var useranswer = radios[i].value;
                 if (i == correctans[question_number]) {
                     score += 10;
-                };               
+                }; 
+                else {
+                    document.getElementById("WrongAns").innerHTML= correctans;
+                    
+                    
 
            document.getElementById(questions[question_number]).style.display="none";
           
