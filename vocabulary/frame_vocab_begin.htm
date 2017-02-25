@@ -237,7 +237,7 @@
        </div>
      <div id="Wrong" style="display:none;">
          <p> Sorry, that is incorrect. The correct answer is <br> </p>
-         <div id="WrongAns"></div>
+         <div id="Wrong"></div>
     </div>
     
        
@@ -266,8 +266,9 @@
                     score += 10;
                 }
                 else {
-                    document.getElementById("WrongAns").innerHTML= correctans;
-                    //document.getElementById(questions[question_number]).style.display="block";
+                    wrongans=[useranswer];
+                    document.getElementById("Wrong").innerHTML=correctans;
+                    document.getElementById(questions[question_number]).style.display="block";                    
                 }
                     
 
