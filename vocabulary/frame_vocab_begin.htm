@@ -345,7 +345,7 @@ var x = setInterval(function() {
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
-        document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
+        /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
           if (wrongans.length > 0) 
           {
               var wrongQNoString = "";
@@ -355,9 +355,9 @@ var x = setInterval(function() {
 
           document.getElementById("WrongQNos").innerHTML = wrongQNoString;
           document.getElementById("Wrong").style.display="block";    
-          document.getElementById(questions[question_number]).style.display="block";
+          document.getElementById(questions[question_number]).style.display="block";*/
     }
-}; 1000);
+}, 1000);
         };
        
 </script>
