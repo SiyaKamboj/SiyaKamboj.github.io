@@ -277,7 +277,6 @@
                   question_number=question_number+1;
               };
               document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
-             document.getElementById(questions[question_number]).style.display="block";
               if (wrongans.length > 0) 
               {
                   var wrongQNoString = "";
@@ -286,8 +285,8 @@
                   };
               } 
               document.getElementById("WrongQNos").innerHTML = wrongQNoString;
-              //document.getElementById("Wrong").style.display="block";
-                  
+              //document.getElementById("Wrong").style.display="block";              
+             document.getElementById(questions[question_number]).style.display="block";
               };
           };
                     
