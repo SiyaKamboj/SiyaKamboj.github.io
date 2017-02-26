@@ -11,7 +11,7 @@
                         
     <div id="QFrame">
         <p> Time remaining: </p>
-        <div id="demo"> </div> 
+        <div id="timer"> </div> 
     <div id="Abhor1" style="display:none;">
         <p> What is the meaning of "ABHOR"?</p>
     <form> 
@@ -296,7 +296,7 @@
                     score += 10;
                     }
                 else {
-                    wrongans.push(question_number);
+                    wrongans.push(question_number+1);
                 };               
            document.getElementById(questions[question_number]).style.display="none";
           
@@ -321,7 +321,7 @@
            }
         function starttimer(n) {
         // Set the date we're counting down to
-var countDownDate = n+10*1000*60;
+var TestEndTime = n+10*1000*60; //10 minutes is 60*1000*10 miliseconds
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -330,21 +330,21 @@ var x = setInterval(function() {
     var now = new Date().getTime();
     
     // Find the distance between now an the count down date
-    var distance = countDownDate - now;
+    var remainingTime = TestEndTime - now; 
     
     // Time calculations for days, hours, minutes and seconds
     //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+    document.getElementById("timer").innerHTML = minutes + "minutes and " + seconds + "seconds ";
     
     // If the count down is over, write some text 
-    if (distance < 0) {
+    if (remainingTime < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        document.getElementById("timer").innerHTML = "EXPIRED";
         /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
           if (wrongans.length > 0) 
           {
@@ -355,7 +355,7 @@ var x = setInterval(function() {
 
           document.getElementById("WrongQNos").innerHTML = wrongQNoString;
           document.getElementById("Wrong").style.display="block";    
-          document.getElementById(questions[question_number]).style.display="block";*/
+         document.getElementById(questions[question_number]).style.display="block";*/
     }
 }, 1000);
         };
