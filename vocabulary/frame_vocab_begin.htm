@@ -235,7 +235,7 @@
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        
-     <div id="Wrong" style="display:none;">
+     <div id="Wrong" style="display:block;">
          <!-- <p> Sorry, that is incorrect. The correct answer is <br> </p> !-->
          <p> You got the following question(s) wrong:  <br> </p>
          <div id="WrongQNos"></div>
@@ -258,7 +258,8 @@
             document.getElementById("Abhor1").style.display="block";            
         }
         
-        function submitanswer() {
+        
+        function submitinteranswer() {
           var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
@@ -266,19 +267,15 @@
                 var useranswer = radios[i].value;
                 if (i == correctans[question_number]) {
                     score += 10;
-                }
+                    }
                 else {
                     wrongans.push(question_number);
-                    //document.getElementById("Wrong").innerHTML=correctans;                                       
-                };
-              };
-                    
-
+                };               
            document.getElementById(questions[question_number]).style.display="none";
           
               if(question_number<16) {
                   question_number=question_number+1;
-              }
+              };
               document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
              document.getElementById(questions[question_number]).style.display="block";
               if (wrongans.length > 0) 
@@ -289,11 +286,13 @@
                   };
               } 
               document.getElementById("WrongQNos").innerHTML = wrongQNoString;
-              document.getElementById("Wrong").style.display="block";
-  
+              //document.getElementById("Wrong").style.display="block";
+                  
+              };
           };
                     
            };
+       
 </script>
 
  </body>
