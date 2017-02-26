@@ -9,8 +9,8 @@ h1 {
 }
 
 .submit{
-    height: 20%;
-    width: 10%; 
+    height: 10%;
+    width: 5%; 
     background-color: tomato;
     display:inline-block;
     position:relative;
@@ -18,6 +18,8 @@ h1 {
     margin-left:10%;    
     line-height:90px;
 };
+
+
 
 
 
