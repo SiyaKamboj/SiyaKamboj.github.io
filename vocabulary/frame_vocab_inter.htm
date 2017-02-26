@@ -234,7 +234,10 @@
        <div id="Ending" style="display:none;"> 
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
-       </div>       
+       </div> 
+    <div id="NotSubmit" style="display:none">
+        <p> Please select an option</p>
+    </div>
     <script> 
         var questions=["Incontrovertible1", "Antic1", "Imperious1", "Quell1", "Dismal1", "Furtive1", "Brandish1", "Knoll1", "Contortion1", "Precipice1", "Aplomb1", "Egregious1", "Jargon1", "Deft1", "Gusto1"];
         var correctans = [0,2,1,3,1,0,3,2,2,2,3,1,0,0,3 ]; 
@@ -248,17 +251,20 @@
             var score=0;
             document.getElementById("initial").style.display="none";
             document.getElementById("Incontrovertible1").style.display="block";            
-        }
+        }        
+       
         
         function submitinteranswer() {
           var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
                 // do whatever you want with the checked radio
+                document.getElementById("NotSubmit").style.display="none";
                 var useranswer = radios[i].value;
                 if (i == correctans[question_number]) {
                     score += 10;
-                };               
+                };
+              
 
            document.getElementById(questions[question_number]).style.display="none";
           
@@ -268,7 +274,11 @@
               document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
              document.getElementById(questions[question_number]).style.display="block";
                   
+              }
+              else{
+                  document.getElementById("NotSubmit").style.display="block";
               };
+                  
           };
                     
            };
