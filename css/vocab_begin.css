@@ -1,5 +1,14 @@
-div p{
-  font-size:5%;
+.question{
+  font-size:25%;
   font-family: verdana, Times New Roman;
   text-align:center;
+  margin-top:20%;
+  margin-bottom: 5%;
 };
+
+.choices{
+  font-size:15%;
+  text-align:center;
+};
+
+
