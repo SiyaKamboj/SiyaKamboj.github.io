@@ -258,8 +258,29 @@
             document.getElementById("Abhor1").style.display="block";            
         }
         
-        
         function submitinteranswer() {
+          var radios = document.getElementsByName(choices[question_number]);          
+          for (var i = 0, length = radios.length; i < length; i++) {
+              if (radios[i].checked) {
+                // do whatever you want with the checked radio
+                var useranswer = radios[i].value;
+                if (i == correctans[question_number]) {
+                    score += 10;
+                };               
+           document.getElementById(questions[question_number]).style.display="none";
+          
+              if(question_number<16) {
+                  question_number=question_number+1;
+              };
+              document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
+             document.getElementById(questions[question_number]).style.display="block";
+                  
+              };
+          };
+                    
+           };
+        
+       /* function submitinteranswer() {
           var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
@@ -290,7 +311,7 @@
               };
           };
                     
-           };
+           };*/
        
 </script>
 
