@@ -236,8 +236,9 @@
            <div id="EndScore"> </div>
        </div>
      <div id="Wrong" style="display:none;">
-         <p> Sorry, that is incorrect. The correct answer is <br> </p>
-         <div id="Wrong"></div>
+         <!-- <p> Sorry, that is incorrect. The correct answer is <br> </p> !-->
+         <p> You got the following question(s) wrong:  <br> </p>
+         <div id="WrongQNos"></div>
     </div>
     
        
@@ -266,10 +267,10 @@
                     score += 10;
                 }
                 else {
-                    wrongans[wrongans.length]=[useranswer];
-                    document.getElementById("Wrong").innerHTML=correctans;
-                                       
-                }
+                    wrongans.push(question_number);
+                    //document.getElementById("Wrong").innerHTML=correctans;                                       
+                };
+              };
                     
 
            document.getElementById(questions[question_number]).style.display="none";
@@ -279,26 +280,18 @@
               };
               document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
              document.getElementById(questions[question_number]).style.display="block";
-                  
-              };
+              if (wrongans.length > 0) 
+              {
+                  var wrongQNoString = "";
+                  for (var i=0; i<wrongans.length; i++) {
+                    wrongQNoString = wrongQNoString + wrongans[i] + ", ";
+                  };
+              } 
+              document.getElementById("WrongQNos").innerHTML = wrongQNoString;
+              document.getElementById("Wrong").style.display="block";
           };
                     
            };
-              
-               /* nextButton = document.createElement("input");
-                nextButton.type = "button";
-                nextButton.value = "Next Question";
-                document.getElementById("ansNextQ").innerHTML = textnode;
-                linebreak = document.createElement("br");
-                document.getElementById("ansNextQ").appendChild(linebreak);
-                document.getElementById("ansNextQ").appendChild(nextButton);
-                break;*/
-            
-  
-       
-  
-        
-  
 </script>
 
  </body>
