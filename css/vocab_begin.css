@@ -1,5 +1,5 @@
 .question{
-  font-size:70%;
+  font-size:90%;
   font-family: verdana, Times New Roman;
   text-align:center;
   margin-bottom: 5%;
@@ -12,7 +12,7 @@
 
 h1 {
     text-align:center;
-    margin-top:1.5em;
+    margin-top:5%;
 };
 
 .submit{
@@ -22,8 +22,7 @@ h1 {
     display:inline-block;
     position:relative;
     float:left;      
-    margin-left:10%;
-    text-align:center;
+    margin-left:10%;    
     line-height:90px;
 };
 
