@@ -238,7 +238,7 @@
      <div id="Wrong" style="display:block;">
          <!-- <p> Sorry, that is incorrect. The correct answer is <br> </p> !-->
          <p> You got the following question(s) wrong:  <br> </p>
-         <div id="WrongQNos"></div>
+         <div id="WrongQNos" style="display:block;"></div>
         </div>
     </div>
     
@@ -304,9 +304,10 @@
                   for (var i=0; i<wrongans.length; i++) {
                     wrongQNoString = wrongQNoString + wrongans[i] + ", ";
                   };
-              } 
-              document.getElementById("WrongQNos").innerHTML = wrongQNoString;
-              //document.getElementById("Wrong").style.display="block";              
+                  
+                  document.getElementById("WrongQNos").innerHTML = wrongQNoString;
+                  document.getElementById("Wrong").style.display="block";    
+              };
              document.getElementById(questions[question_number]).style.display="block";
               };
           };
