@@ -343,7 +343,7 @@
             
         /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
           if (wrongans.length > 0) 
-          {
+          {submit
               var wrongQNoString = "";
               for (var i=0; i<wrongans.length; i++) {
                 wrongQNoString = wrongQNoString + wrongans[i] + ", ";
@@ -355,23 +355,11 @@
     }
 }, 1000);
         };
-         var cancel = false;
-    function drop() {
-        setTimeout(function () {    //  call a 250ms setTimeout when the loop is called
-            setMarkers(map, locationArray, locationNameArray, iterator);
-            iterator++;
-            if (iterator < locationArray.length && cancel === false) {      //  if the counter < 10, loop!
-                drop();             
-       }
-     }, 250);
-}
-        $("#mybutton").click(function() {
-    cancel = true;
-});
+         
 
             
-        if (question_number==15) {
-           drop();
+        if (question_number=15) {
+            return;
         };
             
        
