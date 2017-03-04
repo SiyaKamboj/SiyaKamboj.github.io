@@ -17,6 +17,12 @@ form{
     background-color: tomato;     
     margin-left:45%;  
     color: white;
+}
+
+#NotSubmit{
+  color:red;
+  font-style:italic;
+  text-align:center;
 };
 
 
