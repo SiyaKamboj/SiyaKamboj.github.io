@@ -11,6 +11,7 @@ h1 {
 
 form{
   margin-left:40%;
+  font-size:90%;
 }
 
 .submit{    
@@ -22,7 +23,7 @@ form{
 #NotSubmit{
   color:red;
   font-style:italic;
-  text-align:center;
+  margin-left:40%;
 };
 
 
