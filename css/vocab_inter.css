@@ -13,17 +13,10 @@ form{
   margin-left:40%;
 }
 
-.submit{
-    /*height: 10%;
-    width: 5%; 
-    background-color: tomato;
-    display:inline-block;
-    position:relative;
-    float:left; */     
-    margin-left:45%;    
-    /*line-height:90px;
-    text-align:center;
-    color: white;*/
+.submit{    
+    background-color: tomato;     
+    margin-left:45%;  
+    color: white;
 };
 
 
