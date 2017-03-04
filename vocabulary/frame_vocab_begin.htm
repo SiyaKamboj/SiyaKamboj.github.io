@@ -246,6 +246,13 @@
         </div>
     </div>
     </div> 
+     <div id="Wrong2" style="display:block;">
+          <p> Sorry, that is incorrect. The correct answer is <br> </p>
+     </div>
+     <div id="submitwrong">
+     <input type="submit" value="Go To The Next Question" id="submitwrong"/>
+     </div>
+          
     
     
        
@@ -300,6 +307,11 @@
                     }
                 else {
                     wrongans.push(question_number+1);
+                     document.getElementById( "Wrong2").innerHTML= correctans;
+                     document.getElementById("sumbitwrong").innerHTML.style.displya="block";
+                    
+                    
+                     
                 };               
            document.getElementById(questions[question_number]).style.display="none";
           
