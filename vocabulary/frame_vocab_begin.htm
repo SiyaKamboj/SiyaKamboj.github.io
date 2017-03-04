@@ -322,6 +322,7 @@
           };
                     
            }
+         var myVar = setInterval(starttimer, 1000);
         function starttimer(n) {
              // Set the date we're counting down to
             var TestEndTime = n+10*1000*60; //10 minutes is 60*1000*10 miliseconds
@@ -358,6 +359,9 @@
     }
 }, 1000);
         };
+         if (questions===15) {
+              clearInterval(myVar);
+         };
          
 
             
