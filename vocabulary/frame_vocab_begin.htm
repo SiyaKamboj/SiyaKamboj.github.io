@@ -320,31 +320,27 @@
                     
            }
         function starttimer(n) {
-        // Set the date we're counting down to
-var TestEndTime = n+10*1000*60; //10 minutes is 60*1000*10 miliseconds
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
+             // Set the date we're counting down to
+            var TestEndTime = n+10*1000*60; //10 minutes is 60*1000*10 miliseconds
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            // Get todays date and time
+            var now = new Date().getTime();    
+            // Find the distance between now an the count down date
+            var remainingTime = TestEndTime - now;     
+            // Time calculations for days, hours, minutes and seconds
+           //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+           // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);    
+        // Output the result in an element with id="demo"
+        document.getElementById("timer").innerHTML = minutes + "minutes and " + seconds + "seconds ";
     
-    // Find the distance between now an the count down date
-    var remainingTime = TestEndTime - now; 
-    
-    // Time calculations for days, hours, minutes and seconds
-    //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("timer").innerHTML = minutes + "minutes and " + seconds + "seconds ";
-    
-    // If the count down is over, write some text 
-    if (remainingTime < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "EXPIRED";
+        // If the count down is over, write some text 
+        if (remainingTime < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";            
+            
         /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
           if (wrongans.length > 0) 
           {
@@ -359,6 +355,21 @@ var x = setInterval(function() {
     }
 }, 1000);
         };
+         var cancel = false;
+    function drop() {
+        setTimeout(function () {    //  call a 250ms setTimeout when the loop is called
+            setMarkers(map, locationArray, locationNameArray, iterator);
+            iterator++;
+            if (iterator < locationArray.length && cancel === false) {      //  if the counter < 10, loop!
+                drop();             
+       }
+     }, 250);
+}
+            
+        if (question_number==15) {
+           stoptimer();
+        };
+            
        
 </script>
 
