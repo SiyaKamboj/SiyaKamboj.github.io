@@ -246,6 +246,10 @@
         </div>
     </div>
     </div> 
+     <div id="Expired" style="display:block;">
+          <p> Your time has expired, so you can not finish the test </p>
+          <input type="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
+     </div>
      <!--<div id="Wrong2" style="display:block;">
           <p> Sorry, that is incorrect. The correct answer is <br> </p>
      </div>
@@ -333,11 +337,10 @@
               };
           };
                     
-           }
-         var myVar = setInterval(starttimer, 1000);
+           }         
         function starttimer(n) {
              // Set the date we're counting down to
-            var TestEndTime = n+10*1000*60; //10 minutes is 60*1000*10 miliseconds
+            var TestEndTime = n+10*100*6; //10 minutes is 60*1000*10 miliseconds-Actual: var TestEndTime = n+10*1000*60;
             // Update the count down every 1 second
             var x = setInterval(function() {
             // Get todays date and time
@@ -355,7 +358,9 @@
         // If the count down is over, write some text 
         if (remainingTime < 0) {
             clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED";            
+            document.getElementById("timer").innerHTML = "EXPIRED"; 
+             document.getElementById("Expired").style.display="block";
+             
             
         /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
           if (wrongans.length > 0) 
