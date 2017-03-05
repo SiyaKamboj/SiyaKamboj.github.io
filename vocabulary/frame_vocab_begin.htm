@@ -274,6 +274,7 @@
         }
         
        function submitanswer() {
+           ocument.getElementById('submit').style.visibility = 'hidden';
           var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
@@ -300,7 +301,7 @@
                              
                
         function showNextQuestion() {
-            
+            ocument.getElementById('submit').style.visibility = 'visible';
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
