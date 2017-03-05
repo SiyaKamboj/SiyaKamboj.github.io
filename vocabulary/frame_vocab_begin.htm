@@ -274,7 +274,7 @@
         }
         
        function submitanswer() {
-           
+          document.getElementById('submit').style.visibility = "hidden"; 
           var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
               if (radios[i].checked) {
@@ -291,18 +291,12 @@
                     //console.log(String(radios[correctanschoicenum].value));
                     document.getElementById("correctanswer").innerHTML= label.innerHTML;
                     document.getElementById("Wrong").style.display="block"; 
-                     };              
-           
+                     };
               };
           };
-           document.getElementById('submit').style.display = "none";
-                    
-           }  
-                    
-                             
-               
-        function showNextQuestion() {
-           document.getElementById('submit').style.display = "block";
+       }
+    function showNextQuestion() {
+           document.getElementById('submit').style.visibility = "visible";
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
