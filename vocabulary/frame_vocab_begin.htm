@@ -246,14 +246,19 @@
         </div>
     </div>
     </div> 
-     <div id="Expired" style="display:block;">
+     <div id="Expired" style="display:none;">
           <p> Your time has expired, so you can not finish the test </p>
           <input type="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
      </div>
-     <div id="Wrong2" style="display:block;">
+     <div id="Wrong2" style="display:none;">
           <p> Sorry, that is incorrect. The correct answer is <br> </p>
-         <input type="submit" value="Go To The Next Question" id="submitwrong" onclick="submitanswer()"/>
+         <div id="correctanswer"> </div>
+         <input type="submit" value="Go To The Next Question" id="continue" onclick="showNextQuestion()"/>
      </div>
+    <div id="Correct" style="display:none;">
+        <p> That is correct </p>
+        <input type="submit" value="Go To The Next Question" id="continue" onclick="showNextQuestion()"/>
+    </div>
      
    
     
@@ -301,6 +306,7 @@
           };
                     
            }; */
+        
        
        function submitanswer() {
           var radios = document.getElementsByName(choices[question_number]);          
@@ -310,36 +316,35 @@
                 var useranswer = radios[i].value;
                 if (i == correctans[question_number]) {
                     score += 10;
+                    document.getElementById("Correct").style.display="block";
                     }
                 else {
-                    wrongans.push(question_number+1);
-                     document.getElementById( "Wrong2").innerHTML= correctans;
-                     document.getElementById("sumbitwrong").innerHTML.style.display="block";
-                    
-                    
-                     
-                };               
-           document.getElementById(questions[question_number]).style.display="none";
-          
-              if(question_number<16) {
-                  question_number=question_number+1;
-              };
-              document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
-              if (wrongans.length > 0) 
-              {
-                  var wrongQNoString = "";
-                  for (var i=0; i<wrongans.length; i++) {
-                    wrongQNoString = wrongQNoString + wrongans[i] + ", ";
-                  };
-                  
-                  document.getElementById("WrongQNos").innerHTML = wrongQNoString;
-                  document.getElementById("Wrong").style.display="block";    
-              };
-             document.getElementById(questions[question_number]).style.display="block";
+                    wrongans.push(question_number+1);                    
+                     document.getElementById("correctanswer").innerHTML= correctans;
+                    document.getElementById("Wrong2").style.display="block"; 
+                     };              
+           
               };
           };
                     
-           }         
+           }  
+                    
+                             
+               
+        function showNextQuestion() {
+            document.getElementById("Wrong2").style.display="none";
+           document.getElementById("Correct").style.display="none";
+            document.getElementById(questions[question_number]).style.display="none";
+            for(var i=0, i<questions.length,  i++){
+              if(question_number<16) {
+                  question_number=question_number+1;
+              };
+              document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10              
+             document.getElementById(questions[question_number]).style.display="block";
+        };
+        }
+        
+        
         function starttimer(n) {
              // Set the date we're counting down to
             var TestEndTime = n+10*1000*60; //10 minutes is 60*1000*10 miliseconds-Actual: var TestEndTime = n+10*1000*60;
