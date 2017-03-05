@@ -239,18 +239,13 @@
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        
-     <div id="Wrong" style="display:block;">
-         <!-- <p> Sorry, that is incorrect. The correct answer is <br> </p> !-->
-         <p> You got the following question(s) wrong:  <br> </p>
-         <div id="WrongQNos" style="display:block;"></div>
-        </div>
     </div>
     </div> 
      <div id="Expired" style="display:none;">
           <p> Your time has expired, so you can not finish the test </p>
           <input type="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
      </div>
-     <div id="Wrong2" style="display:none;">
+     <div id="Wrong" style="display:none;">
           <p> Sorry, that is incorrect. The correct answer is <br> </p>
          <div id="correctanswer"> </div>
          <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
@@ -284,29 +279,6 @@
             document.getElementById("Abhor1").style.display="block";            
         }
         
-        /* function submitanswer() {
-          var radios = document.getElementsByName(choices[question_number]);          
-          for (var i = 0, length = radios.length; i < length; i++) {
-              if (radios[i].checked) {
-                // do whatever you want with the checked radio
-                var useranswer = radios[i].value;
-                if (i == correctans[question_number]) {
-                    score += 10;
-                };               
-           document.getElementById(questions[question_number]).style.display="none";
-          
-              if(question_number<16) {
-                  question_number=question_number+1;
-              };
-              document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
-             document.getElementById(questions[question_number]).style.display="block";
-                  
-              };
-          };
-                    
-           }; */
-        
-       
        function submitanswer() {
           var radios = document.getElementsByName(choices[question_number]);          
           for (var i = 0, length = radios.length; i < length; i++) {
@@ -319,9 +291,11 @@
                     }
                 else {
                     var correctanschoicenum = correctans[question_number];
-                    console.log(String(radios[correctanschoicenum].value));
-                    document.getElementById("correctanswer").innerHTML=radios[correctanschoicenum].value;
-                    document.getElementById("Wrong2").style.display="block"; 
+                    var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
+                    var label = document.querySelector(selector);
+                    //console.log(String(radios[correctanschoicenum].value));
+                    document.getElementById("correctanswer").innerHTML= label.innerHTML;
+                    document.getElementById("Wrong").style.display="block"; 
                      };              
            
               };
@@ -335,7 +309,7 @@
            
            var btn = document.getElementsById("submit"); 
             btn.disabled = true;
-           document.getElementById("Wrong2").style.display="none";
+           document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
             if(question_number<16) {
