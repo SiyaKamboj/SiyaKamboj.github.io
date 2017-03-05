@@ -1,5 +1,5 @@
 <html>
-     <link type="text/css" rel="stylesheet" href="/css/vocab_inter.css"> 
+
 <body>
     <h1> Beginner Level Vocabulary Test </h1>
     <div id="initial">
@@ -340,7 +340,7 @@
            }         
         function starttimer(n) {
              // Set the date we're counting down to
-            var TestEndTime = n+10*100*6; //10 minutes is 60*1000*10 miliseconds-Actual: var TestEndTime = n+10*1000*60;
+            var TestEndTime = n+10*1000*6; //10 minutes is 60*1000*10 miliseconds-Actual: var TestEndTime = n+10*1000*60;
             // Update the count down every 1 second
             var x = setInterval(function() {
             // Get todays date and time
@@ -359,6 +359,7 @@
         if (remainingTime < 0) {
             clearInterval(x);
             document.getElementById("timer").innerHTML = "EXPIRED"; 
+             document.getElementById("QFrame").style.display="none";
              document.getElementById("Expired").style.display="block";
              
             
@@ -381,7 +382,14 @@
               
          };
          
-
+         
+         
+/*randomize array in script
+ EXAMPLE VARIABLE :var points = [40, 100, 1, 5, 25, 10];
+     function myFunction() {
+          points.sort(function(a, b){return 0.5 - Math.random()});    
+}
+         
             
        
        
