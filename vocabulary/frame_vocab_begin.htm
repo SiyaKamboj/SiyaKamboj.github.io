@@ -12,7 +12,6 @@
     </div>
                         
     <div id="QFrame">
-        <p> Time remaining: </p>
         <div id="timer"> </div> 
     <div id="Abhor1" style="display:none;">
         <p> What is the meaning of "ABHOR"?</p>
@@ -217,7 +216,7 @@
        </div>
        <input type="submit" value="Submit" id="submit" onclick="submitanswer()" style="display:none" />
        <div id="Ending" style="display:none;"> 
-           <p> Congratulations! You finished the test. Your score is <br> </p>
+           <p> You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        
     </div>
@@ -307,12 +306,15 @@
             var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);    
         // Output the result in an element with id="demo"
-        document.getElementById("timer").innerHTML = minutes + " minutes and " + seconds + " seconds ";
+        document.getElementById("timer").innerHTML = "Time remaining: " + minutes + " minutes and " + seconds + " seconds ";
     
         // If the count down is over, write some text 
         if (remainingTime < 0) {
             clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED"; 
+            document.getElementById("timer").innerHTML = "TIME UP!"; 
+            document.getElementById("submit").style.display="none";
+            document.getElementById(questions[question_number]).style.display="none";
+            document.getElementById("Ending").style.display="block";
              /*document.getElementById("QFrame").style.display="none";
              document.getElementById("Expired").style.display="block";*/
              
