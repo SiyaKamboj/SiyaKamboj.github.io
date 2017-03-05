@@ -215,7 +215,7 @@
             </form>
                        
        </div>
-       <input type="submit" value="Submit" id="submit" onclick="submitanswer()" />
+       <input type="submit" value="Submit" id="submit" onclick="submitanswer()" style="display:none" />
        <div id="Ending" style="display:none;"> 
            <p> Congratulations! You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
@@ -251,7 +251,8 @@
             starttimer(n);
             var score=0;            
             document.getElementById("initial").style.display="none";
-            document.getElementById("Abhor1").style.display="block";            
+            document.getElementById("Abhor1").style.display="block"; 
+            document.getElementById('submit').style.display = "block"; 
         }
         
        function submitanswer() {
