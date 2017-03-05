@@ -333,7 +333,8 @@
                
         function showNextQuestion() {
            
-            document.getElementsById("submit"); btn.disabled = true
+           var btn = document.getElementsById("submit"); 
+            btn.disabled = true;
            document.getElementById("Wrong2").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
