@@ -250,12 +250,13 @@
           <p> Your time has expired, so you can not finish the test </p>
           <input type="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
      </div>
-     <!--<div id="Wrong2" style="display:block;">
+     <div id="Wrong2" style="display:block;">
           <p> Sorry, that is incorrect. The correct answer is <br> </p>
+         <input type="submit" value="Go To The Next Question" id="submitwrong" onclick="submitanswer()"/>
      </div>
-     <div id="submitwrong">
-     <input type="submit" value="Go To The Next Question" id="submitwrong"/>
-     </div>!-->
+     
+   
+    
           
     
     
@@ -378,10 +379,10 @@
     }
 }, 1000);
         };
-         if (question_number===15) {
+         /*if (question_number===15) {
               var remainingTime= 0;
               
-         };
+         };*/
          
          
          
