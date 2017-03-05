@@ -318,8 +318,7 @@
                     document.getElementById("Correct").style.display="block";
                     }
                 else {
-                    wrongans.push(question_number+1);                    
-                     document.getElementById("correctanswer").innerHTML= correctans;
+                    document.getElementById("correctanswer").innerHTML= correctans;
                     document.getElementById("Wrong2").style.display="block"; 
                      };              
            
@@ -334,7 +333,7 @@
             document.getElementById("Wrong2").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";
-            for(var i=0, i<questions.length,  i++){
+            for(var i=1, i<questions.length,  i++){
               if(question_number<16) {
                   question_number=question_number+1;
               };
