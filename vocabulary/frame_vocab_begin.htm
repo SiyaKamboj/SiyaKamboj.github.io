@@ -332,6 +332,7 @@
                              
                
         function showNextQuestion() {
+            document.getElementsByType("submit").style.display="none";
            document.getElementById("Wrong2").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
