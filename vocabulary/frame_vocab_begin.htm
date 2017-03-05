@@ -318,8 +318,8 @@
                     document.getElementById("Correct").style.display="block";
                     }
                 else {
-                    
-                    document.getElementById("correctanswer").innerHTML=radios[correctans[question_number]];
+                    var correctanschoicenum = correctans[question_number];
+                    document.getElementById("correctanswer").innerHTML=radios[correctanschoicenum].value;
                     document.getElementById("Wrong2").style.display="block"; 
                      };              
            
