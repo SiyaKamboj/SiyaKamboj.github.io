@@ -254,14 +254,8 @@
         <p> That is correct </p>
         <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
     </div>
-     
-   
     
-          
-    
-    
-       
-    <script> 
+<script> 
         var questions=["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1","Abdicate1", "Idyllic1", "Assail1", "Nuance1", "Talisman1", "Airy1", "Boisterous1", "Adduce1","Histrionic1", "Plaudit1", "Aeronautics1", "Ending"];
         var correctans = [0,0, 2, 3, 1, 2, 0, 2, 3, 0, 2, 0, 3, 0, 1]; 
         var choices=['q1choices', 'q2choices', 'q3choices', 'q4choices', 'q5choices', 'q6choices', 'q7choices', 'q8choices', 'q9choices','q10choices', 'q11choices', 'q12choices', 'q13choices', 'q14choices', 'q15choices' ];
@@ -306,9 +300,7 @@
                              
                
         function showNextQuestion() {
-           
-           var btn = document.getElementsById("submit"); 
-            btn.disabled = true;
+            
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
