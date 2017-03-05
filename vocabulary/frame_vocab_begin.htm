@@ -312,8 +312,8 @@
                     }
                 else {
                     wrongans.push(question_number+1);
-                     /*document.getElementById( "Wrong2").innerHTML= correctans;
-                     document.getElementById("sumbitwrong").innerHTML.style.displya="block";*/
+                     document.getElementById( "Wrong2").innerHTML= correctans;
+                     document.getElementById("sumbitwrong").innerHTML.style.display="block";
                     
                     
                      
@@ -360,8 +360,8 @@
         if (remainingTime < 0) {
             clearInterval(x);
             document.getElementById("timer").innerHTML = "EXPIRED"; 
-             document.getElementById("QFrame").style.display="none";
-             document.getElementById("Expired").style.display="block";
+             /*document.getElementById("QFrame").style.display="none";
+             document.getElementById("Expired").style.display="block";*/
              
             
         /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
