@@ -253,11 +253,11 @@
      <div id="Wrong2" style="display:none;">
           <p> Sorry, that is incorrect. The correct answer is <br> </p>
          <div id="correctanswer"> </div>
-         <input type="submit" value="Go To The Next Question" id="continue" onclick="showNextQuestion()"/>
+         <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
      </div>
     <div id="Correct" style="display:none;">
         <p> That is correct </p>
-        <input type="submit" value="Go To The Next Question" id="continue" onclick="showNextQuestion()"/>
+        <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
     </div>
      
    
@@ -331,15 +331,16 @@
                              
                
         function showNextQuestion() {
-            document.getElementById("Wrong2").style.display="none";
+           document.getElementById("Wrong2").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
-              if(question_number<16) {
-                  question_number=question_number+1;
-              };
-              document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10              
-             document.getElementById(questions[question_number]).style.display="block";
-        };
+            if(question_number<16) {
+                question_number=question_number+1;
+            };
+            document.getElementById(questions[question_number]).style.display="block";
+            document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10              
+             
+        }
        
         
         
