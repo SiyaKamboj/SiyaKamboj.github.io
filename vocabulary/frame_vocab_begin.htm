@@ -332,15 +332,14 @@
         function showNextQuestion() {
             document.getElementById("Wrong2").style.display="none";
            document.getElementById("Correct").style.display="none";
-            document.getElementById(questions[question_number]).style.display="none";
-            for(var i=1; i<questions.length;  i++){
+            document.getElementById(questions[question_number]).style.display="none";            
               if(question_number<16) {
                   question_number=question_number+1;
               };
               document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10              
              document.getElementById(questions[question_number]).style.display="block";
         };
-        }
+       
         
         
         function starttimer(n) {
