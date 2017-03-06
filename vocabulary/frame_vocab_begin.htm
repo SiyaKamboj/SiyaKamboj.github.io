@@ -280,12 +280,12 @@
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
-            if(question_number<16) {
+            if(question_number < questions.length) {
                 question_number=question_number+1;
                 document.getElementById('submit').style.visibility = "visible";
             };
             document.getElementById(questions[question_number]).style.display="block";
-            document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10              
+            document.getElementById("EndScore").innerHTML= score + " out of " + questions.length*10              
              
         }
        
@@ -306,7 +306,7 @@
             var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);    
         // Output the result in an element with id="demo"
-        document.getElementById("timer").innerHTML = "Time remaining: " + minutes + " minutes and " + seconds + " seconds ";
+        document.getElementById("timer").innerHTML = "Time remaining: " + minutes + " mins and " + seconds + " secs.";
     
         // If the count down is over, write some text 
         if (remainingTime < 0) {
@@ -315,40 +315,15 @@
             document.getElementById("submit").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";
             document.getElementById("Ending").style.display="block";
-             /*document.getElementById("QFrame").style.display="none";
-             document.getElementById("Expired").style.display="block";*/
-             
+        }
+            }, 1000);
+            if (question_number == 15) {
+                clearInterval(x);
+                document.getElementById("timer").styke.display = "none"; 
+            };
             
-        /*document.getElementById("EndScore").innerHTML= score + " out of " + question_number*10;
-          if (wrongans.length > 0) 
-          {submit
-              var wrongQNoString = "";
-              for (var i=0; i<wrongans.length; i++) {
-                wrongQNoString = wrongQNoString + wrongans[i] + ", ";
-          };
-
-          document.getElementById("WrongQNos").innerHTML = wrongQNoString;
-          document.getElementById("Wrong").style.display="block";    
-         document.getElementById(questions[question_number]).style.display="block";*/
-    }
-}, 1000);
+            
         };
-         /*if (question_number===15) {
-              var remainingTime= 0;
-              
-         };*/
-         
-         
-         
-/*randomize array in script
- EXAMPLE VARIABLE :var points = [40, 100, 1, 5, 25, 10];
-     function myFunction() {
-          points.sort(function(a, b){return 0.5 - Math.random()});    
-} */
-         
-            
-       
-       
 </script>
 
  </body>
