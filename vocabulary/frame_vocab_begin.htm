@@ -313,6 +313,8 @@
        }
     function randomize() {
         questions.sort(function(a,b,c,d,e,f,g,h,i, j, k, l, m, n, o){return 0.5-Math.random()});
+        var selected= questions.sort(function(a,b,c,d,e,f,g,h,i, j, k, l, m, n, o){return 0.5-Math.random()});
+        submitanswer();
     };
     function showNextQuestion() {
            document.getElementById("Wrong").style.display="none";
