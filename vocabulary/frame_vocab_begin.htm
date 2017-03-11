@@ -312,9 +312,7 @@
           };
        }
     function randomize() {
-        questions.sort(function(a,b){return 0.5-Math.random()});
-        var selected= questions.sort(function(a,b){return 0.5-Math.random()});
-        submitanswer();
+        questions.sort(function(a,b){return 0.5-Math.random()});        
     }
     function showNextQuestion() {
            document.getElementById("Wrong").style.display="none";
