@@ -244,6 +244,8 @@
         var score=0;
         //document.getElementById("options").style.display="none";
         function vocabbeginnerstart() {
+            //just added
+            randomize();
             //var frame=document.getElementById("frame_a");
             var d = new Date();
             var n = d.getTime();
@@ -309,6 +311,9 @@
               };
           };
        }
+    function randomize() {
+        questions.sort(function(a,b){return 0.5-Math.random()});
+    };
     function showNextQuestion() {
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
@@ -322,6 +327,12 @@
              
         };
 </script>
+    <!--Randomizing script
+        var points = [40, 100, 1, 5, 25, 10];
+         function myFunction() {
+    points.sort(function(a, b){return 0.5 - Math.random()});
+     };
+!-->
 
  </body>
 </html>
