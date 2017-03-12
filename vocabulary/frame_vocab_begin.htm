@@ -249,10 +249,10 @@
             var n = d.getTime();
             starttimer(n);
             var score=0;            
-            document.getElementById("initial").style.display="none";
-            randomize();
+            document.getElementById("initial").style.display="none";     
             document.getElementById("Abhor1").style.display="block"; 
             document.getElementById('submit').style.display = "block"; 
+            randomize();
         }
     function starttimer(n) {
              // Set the date we're counting down to
@@ -318,7 +318,7 @@
         if (index > -1) {
             questions.splice(index, 1);
        }
-        var index =answers.indexOf(correctans);
+        var ans =answers.indexOf(correctans).value;
     }
     function showNextQuestion() {
            document.getElementById("Wrong").style.display="none";
