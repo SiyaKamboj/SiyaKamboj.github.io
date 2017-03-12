@@ -312,6 +312,8 @@
        }
     function randomize() {
         questions.sort(function(a,b){return 0.5-Math.random()}); 
+        document.getElementById('submit').style.display="block";
+        showNextQuestion();
         var selected= questions.sort(function(a,b){return 0.5-Math.random()});        
         var index = questions.indexOf(selected);
         //remove selected from questions array
@@ -328,7 +330,8 @@
                 question_number=question_number+1;
                 document.getElementById('submit').style.visibility = "visible";
             };
-            document.getElementById(questions[question_number]).style.display="block";
+            //document.getElementById(questions[question_number]).style.display="block";
+             randomize();
             document.getElementById("EndScore").innerHTML= score + " out of " + (questions.length-1)*10              
              
         };
