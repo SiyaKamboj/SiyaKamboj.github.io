@@ -311,15 +311,24 @@
               };
           };
        }
-    function randomize() {
-        var random_num = Math.random()
-        var to_sort_qns = questions;
-        to_sort_qns.splice(-1);
-        to_sort_qns.sort(function(a, b){return 0.5 - random_num});
-        correctans.sort(function(a, b){return 0.5 - random_num});
-        choices.sort(function(a, B){return 0.5 - random_num});
-        questions = to_sort_qns.push(questions[-1]);
+   function randomize() {
+    var j, x, i, y, z;
+    for (i = questions.length-1; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = questions[i - 1]; 
+        y = correctans[i-1];
+        z = choices[i-1];
+        //swapped 2 variables 
+        questions[i - 1] = questions[j]; 
+        correctans[i-1]=correctans[j];
+        choices[i-1]=choices[j];
+        questions[j] = x;
+        correctans[j]=y;
+        choices[j]=z;      
+    
     }
+}
+    
     /*for (i=1; i<questions.length; i=i+1){
         function randomize() {        
             questions.sort(function(a,b){return 0.5-Math.random()}); 
