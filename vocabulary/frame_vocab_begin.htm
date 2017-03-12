@@ -243,15 +243,14 @@
         var question_number=0;
         var score=0;
         //document.getElementById("options").style.display="none";
-        function vocabbeginnerstart() {
-            //just added
-            randomize();
+        function vocabbeginnerstart() {            
             //var frame=document.getElementById("frame_a");
             var d = new Date();
             var n = d.getTime();
             starttimer(n);
             var score=0;            
             document.getElementById("initial").style.display="none";
+            randomize();
             document.getElementById("Abhor1").style.display="block"; 
             document.getElementById('submit').style.display = "block"; 
         }
