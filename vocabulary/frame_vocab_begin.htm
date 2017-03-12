@@ -311,6 +311,7 @@
           };
        }
     function randomize() {
+        questions.splice(0,1);
         questions.sort(function(a,b){return 0.5-Math.random()}); 
         document.getElementById('submit').style.display="block";        
         var selected= questions.sort(function(a,b){return 0.5-Math.random()});        
