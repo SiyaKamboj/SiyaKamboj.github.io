@@ -245,7 +245,7 @@
         //document.getElementById("options").style.display="none";
         function vocabbeginnerstart() {
             //just added
-            //randomize();
+            randomize();
             //var frame=document.getElementById("frame_a");
             var d = new Date();
             var n = d.getTime();
@@ -311,7 +311,7 @@
               };
           };
        }
-    /*function randomize() {
+    function randomize() {
         questions.sort(function(a,b){return 0.5-Math.random()}); 
         var selected= questions.sort(function(a,b){return 0.5-Math.random()});        
         var index = questions.indexOf(selected);
@@ -320,7 +320,7 @@
             questions.splice(index, 1);
        }
         var index =answers.indexOf(correctans);
-    }*/
+    }
     function showNextQuestion() {
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
