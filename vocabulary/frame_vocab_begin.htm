@@ -248,11 +248,13 @@
             var d = new Date();
             var n = d.getTime();
             starttimer(n);
-            var score=0;            
-            document.getElementById("initial").style.display="none";     
-            document.getElementById("Abhor1").style.display="block"; 
-            document.getElementById('submit').style.display = "block"; 
+            var score=0;  
             randomize();
+            document.getElementById("initial").style.display="none";    
+            var first_qn = questions[0];
+            document.getElementById(first_qn).style.display="block"; 
+            document.getElementById('submit').style.display = "block"; 
+            
         }
     function starttimer(n) {
              // Set the date we're counting down to
@@ -310,7 +312,16 @@
               };
           };
        }
-    for (i=1; i<questions.length; i=i+1){
+    function randomize() {
+        var random_num = Math.random()
+        var to_sort_qns = questions;
+        to_sort_qns.splice(-1);
+        to_sort_qns.sort(function(a, b){return 0.5 - random_num});
+        correctans.sort(function(a, b){return 0.5 - random_num});
+        choices.sort(function(a, B){return 0.5 - random_num});
+        questions = to_sort_qns.push(questions[-1]);
+    }
+    /*for (i=1; i<questions.length; i=i+1){
         function randomize() {        
             questions.sort(function(a,b){return 0.5-Math.random()}); 
             //document.getElementById('submit').style.display="block";        
@@ -322,7 +333,7 @@
             }
             var ans =answers.indexOf(correctans).value;
         }
-    }
+    }*/
     function showNextQuestion() {
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
