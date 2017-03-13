@@ -234,7 +234,9 @@
         <p> That is correct </p>
         <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
     </div>
-    
+    <div id="noselect" style="display:none;">
+        <p>Please select an answer before submitting.</p>
+    </div>
 <script> 
    var questions = ["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1", "Abdicate1", "Idyllic1", "Assail1", "Nuance1", "Talisman1", "Airy1", "Boisterous1", "Adduce1", "Histrionic1", "Plaudit1", "Aeronautics1", "Ending"];
    var correctans = [0, 0, 2, 3, 1, 2, 0, 2, 3, 0, 2, 0, 3, 0, 1];
@@ -310,7 +312,11 @@
            document.getElementById("correctanswer").innerHTML = label.innerHTML;
            document.getElementById("Wrong").style.display = "block";
          };
-       };
+       }
+         else {
+             //document.getElementById("Correct").innerHTML = "Please select an answer before submitting.";
+             document.getElementById("noselect").style.display = "block";
+         };
      };
    }
 
@@ -333,6 +339,7 @@
    }
     
    function showNextQuestion() {
+     document.getElementById("noselect").style.display = "none";
      document.getElementById("Wrong").style.display = "none";
      document.getElementById("Correct").style.display = "none";
      document.getElementById(questions[question_number]).style.display = "none";
