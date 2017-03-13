@@ -268,8 +268,6 @@
        // Find the distance between now an the count down date
        var remainingTime = TestEndTime - now;
        // Time calculations for days, hours, minutes and seconds
-       //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-       // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
        var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
        var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
        // Output the result in an element with id="demo"
@@ -338,21 +336,17 @@
      document.getElementById("Wrong").style.display = "none";
      document.getElementById("Correct").style.display = "none";
      document.getElementById(questions[question_number]).style.display = "none";
-     if (question_number < questions.length - 1) {
+     if (question_number < questions.length - 2) {
        question_number = question_number + 1;
        document.getElementById('submit').style.visibility = "visible";
-     }
-     else if (question_number == questions.length - 1) {
-       stoptimer();
-       document.getElementById('submit').style.visibility = "block";
+     };
+     if (question_number == questions.length - 1) {
+       document.getElementById("timer").innerHTML = "Time taken: " + test_time_mins + " mins and " + test_time_secs + " secs.";
+       document.getElementById('submit').style.visibility = "none";
      };
      document.getElementById(questions[question_number]).style.display = "block";
      document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
 
-   }
-
-   function stoptimer() {
-     document.getElementById("timer").innerHTML = "Time taken: " + test_time_mins + " mins and " + test_time_secs + " secs.";
    };
 
 </script>
