@@ -55,7 +55,7 @@
        <div id="Obdurate1" style="display:none;">
             <p> What is the meaning of "OBDURATE"?</p>
              <form> 
-                <input type="radio" name="q4choices" id="q4a0" /><label for="q4a0">Casual/not being seriosu about something taken seriously by others</label>
+                <input type="radio" name="q4choices" id="q4a0" /><label for="q4a0">Casual/not being seriosus about something taken seriously by others</label>
                 <br />
                 <input type="radio" name="q4choices" id="q4a1" /><label for="q4a1">Fail to fulfill a duty</label>
                 <br />
@@ -242,6 +242,8 @@
         var wrongans=[ ];
         var question_number=0;
         var score=0;
+        var minutes = 0;
+        var seconds = 0;
         //document.getElementById("options").style.display="none";
         function vocabbeginnerstart() {            
             //var frame=document.getElementById("frame_a");
@@ -267,8 +269,8 @@
             // Time calculations for days, hours, minutes and seconds
            //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
            // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);    
+            minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);    
         // Output the result in an element with id="demo"
         document.getElementById("timer").innerHTML = "Time remaining: " + minutes + " mins and " + seconds + " secs.";
     
@@ -346,15 +348,22 @@
            document.getElementById("Wrong").style.display="none";
            document.getElementById("Correct").style.display="none";
             document.getElementById(questions[question_number]).style.display="none";            
-            if(question_number < questions.length) {
+            if(question_number < questions.length-1) {
                 question_number=question_number+1;
                 document.getElementById('submit').style.visibility = "visible";
+            }
+            elseif (question_number==16) {
+                stoptimer();
+                document.getElementById('submit').style.visibility = "block";  
             };
             document.getElementById(questions[question_number]).style.display="block";
-           //randomize();
             document.getElementById("EndScore").innerHTML= score + " out of " + (questions.length-1)*10              
              
-        };
+        }
+    function stoptimer()
+    {
+           document.getElementById("timer").innerHTML = "Time taken: " + (9-minutes) + " mins and " + (60-seconds) + " secs.";
+    };
 </script>
     <!--Randomizing script
         var points = [40, 100, 1, 5, 25, 10];
