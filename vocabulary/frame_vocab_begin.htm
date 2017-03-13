@@ -342,7 +342,7 @@
        question_number = question_number + 1;
        document.getElementById('submit').style.visibility = "visible";
      }
-     elseif(question_number == 16) {
+     else if (question_number == questions.length) {
        stoptimer();
        document.getElementById('submit').style.visibility = "block";
      };
