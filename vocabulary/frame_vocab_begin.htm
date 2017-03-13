@@ -331,22 +331,9 @@
        correctans[j] = y;
        choices[j] = z;
 
-     }
+     };
    }
-
-   /*for (i=1; i<questions.length; i=i+1){
-       function randomize() {        
-           questions.sort(function(a,b){return 0.5-Math.random()}); 
-           //document.getElementById('submit').style.display="block";        
-           var selected= questions.sort(function(a,b){return 0.5-Math.random()});        
-           var index = questions.indexOf(selected);
-           //remove selected from questions array
-           if (index > -1) {
-               questions.splice(index, 1);
-           }
-           var ans =answers.indexOf(correctans).value;
-       }
-   }*/
+    
    function showNextQuestion() {
      document.getElementById("Wrong").style.display = "none";
      document.getElementById("Correct").style.display = "none";
