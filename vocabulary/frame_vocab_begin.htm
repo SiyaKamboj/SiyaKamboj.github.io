@@ -258,7 +258,7 @@
      //randomize();
      document.getElementById("initial").style.display = "none";
      document.getElementById(questions[0]).style.display = "block";
-     document.getElementById('submit').style.display = "block";
+     document.getElementById('submit').style.visibility = "visible";
 
    }
 
@@ -341,6 +341,7 @@
      document.getElementById("noselect").style.display = "none";
      document.getElementById("Wrong").style.display = "none";
      document.getElementById("Correct").style.display = "none";
+     document.getElementById("submit").style.visibility = "visible";
      document.getElementById(questions[question_number]).style.display = "none";
      if (question_number < questions.length - 1) {
        question_number = question_number + 1;
