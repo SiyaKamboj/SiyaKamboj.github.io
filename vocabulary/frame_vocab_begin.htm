@@ -294,24 +294,21 @@
      };*/
    }
 
-   function submitanswer() {
+   function submitanswer() {     
+     document.getElementById("submit").style.visibility = "hidden";
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
-         // do whatever you want with the checked radio
+         // do whatever you want with the checked radio         
+         document.getElementById("noselect").style.display = "none";
          var useranswer = radios[i].value;
          if (i == correctans[question_number]) {
-           score += 10;
-           document.getElementById("submit").style.visibility = "hidden";
-           document.getElementById("noselect").style.display = "none";
+           score += 10;           
            document.getElementById("Correct").style.display = "block";
          } else {
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
            var label = document.querySelector(selector);
-           //console.log(String(radios[correctanschoicenum].value));
-           document.getElementById("submit").style.visibility = "hidden";
-           document.getElementById("noselect").style.display = "none";
            document.getElementById("correctanswer").innerHTML = label.innerHTML;
            document.getElementById("Wrong").style.display = "block";
          };
