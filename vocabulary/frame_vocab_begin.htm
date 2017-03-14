@@ -288,12 +288,10 @@
          document.getElementById("Ending").style.display = "block";
        }
      }, 1000);
-     if (question_number == 15) {
+     /*if (question_number == 15) {
        clearInterval(x);
        document.getElementById("timer").style.display = "none";
-     };
-
-
+     };*/
    }
 
    function submitanswer() {
@@ -317,7 +315,7 @@
        }
          else {
              //document.getElementById("Correct").innerHTML = "Please select an answer before submitting.";
-             document.getElementById("submit").style.display = "block";
+             document.getElementById('submit').style.visibility = "visible";
              document.getElementById("noselect").style.display = "block";
          };
      };
