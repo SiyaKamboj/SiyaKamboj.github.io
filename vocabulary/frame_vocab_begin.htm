@@ -295,6 +295,7 @@
    }
 
    function submitanswer() {
+     document.getElementById("noselect").style.display = "none";
      document.getElementById('submit').style.visibility = "hidden";
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
