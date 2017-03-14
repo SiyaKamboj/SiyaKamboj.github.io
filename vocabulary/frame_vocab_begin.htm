@@ -221,10 +221,7 @@
            <div id="EndScore"> </div>
        
     </div>
-    </div> 
-     <div id="noselect" style="display:none;"> 
-         <p>Please select an answer before submitting.</p>
-     </div>
+    </div>      
      <div id="Expired" style="display:none;">
           <p> Your time has expired, so you can not finish the test </p>
           <input type="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
@@ -238,6 +235,9 @@
         <p> That is correct </p>
         <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
     </div>
+    <div id="noselect" style="display:none;"> 
+         <p>Please select an answer before submitting.</p>
+     </div>
     
 <script> 
    var questions = ["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1", "Abdicate1", "Idyllic1", "Assail1", "Nuance1", "Talisman1", "Airy1", "Boisterous1", "Adduce1", "Histrionic1", "Plaudit1", "Aeronautics1", "Ending"];
@@ -288,24 +288,26 @@
          document.getElementById("Ending").style.display = "block";
        }
      }, 1000);
-     /*if (question_number == 15) {
+     if (question_number == 15) {
        clearInterval(x);
        document.getElementById("timer").style.display = "none";
-     };*/
+     };
    }
 
    function submitanswer() {     
-     document.getElementById("submit").style.visibility = "hidden";
+     document.getElementById("submit").style.display = "none";
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
-         // do whatever you want with the checked radio         
+         // when a radio button is checked, do the following         
          document.getElementById("noselect").style.display = "none";
          var useranswer = radios[i].value;
          if (i == correctans[question_number]) {
+             //if user selected answer is the right one
            score += 10;           
            document.getElementById("Correct").style.display = "block";
          } else {
+             // when answer is wrong
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
            var label = document.querySelector(selector);
@@ -313,8 +315,9 @@
            document.getElementById("Wrong").style.display = "block";
          };
        } else {
+           // when no radio button is selected and "submit" is clicked.
          document.getElementById("noselect").style.display = "block";
-         document.getElementById("submit").style.visibility = "visible";
+         document.getElementById("submit").style.display = "block";
        };
      };
    }
