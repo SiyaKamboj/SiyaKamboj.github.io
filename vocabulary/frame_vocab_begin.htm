@@ -305,16 +305,19 @@
          if (i == correctans[question_number]) {
            score += 10;
            document.getElementById('submit').style.visibility = "hidden";
+           document.getElementById("noselect").style.display = "none";
            document.getElementById("Correct").style.display = "block";
-         } else {
-           var correctanschoicenum = correctans[question_number];
-           var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
-           var label = document.querySelector(selector);
-           //console.log(String(radios[correctanschoicenum].value));
-           document.getElementById('submit').style.visibility = "hidden";
-           document.getElementById("correctanswer").innerHTML = label.innerHTML;
-           document.getElementById("Wrong").style.display = "block";
-         };
+            } 
+           else {
+               var correctanschoicenum = correctans[question_number];
+               var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
+               var label = document.querySelector(selector);
+               //console.log(String(radios[correctanschoicenum].value));
+               document.getElementById('submit').style.visibility = "hidden";
+                 document.getElementById("noselect").style.display = "none";
+               document.getElementById("correctanswer").innerHTML = label.innerHTML;
+               document.getElementById("Wrong").style.display = "block";
+            };
        }
          else {
              document.getElementById("noselect").style.display = "block";
