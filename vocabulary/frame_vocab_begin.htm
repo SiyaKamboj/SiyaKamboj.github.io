@@ -296,10 +296,10 @@
 
    function submitanswer() {     
      document.getElementById('submit').style.visibility = "hidden";
+     document.getElementById("noselect").style.display = "none";
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
-       if (radios[i].checked) {
-         document.getElementById("noselect").style.display = "none";
+       if (radios[i].checked) {         
          // do whatever you want with the checked radio
          var useranswer = radios[i].value;
          if (i == correctans[question_number]) {
@@ -316,8 +316,8 @@
        }
          else {
              //document.getElementById("Correct").innerHTML = "Please select an answer before submitting.";
-             document.getElementById('submit').style.visibility = "visible";
              document.getElementById("noselect").style.display = "block";
+             document.getElementById('submit').style.visibility = "visible";             
          };
      };
    }
