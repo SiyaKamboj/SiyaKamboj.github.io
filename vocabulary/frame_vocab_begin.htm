@@ -314,7 +314,7 @@
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
          // when a radio button is checked, do the following         
-         document.getElementById("noselect").style.display = "none";
+         document.getElementById("NotSubmit").style.display = "none";
          var useranswer = radios[i].value;
          if (i == correctans[question_number]) {
              //if user selected answer is the right one
@@ -355,7 +355,7 @@
    }
     
    function showNextQuestion() {
-     document.getElementById("noselect").style.display = "none";
+     document.getElementById("NotSubmit").style.display = "none";
      document.getElementById("Wrong").style.display = "none";
      document.getElementById("Correct").style.display = "none";
      document.getElementById("submit").style.display = "block";
