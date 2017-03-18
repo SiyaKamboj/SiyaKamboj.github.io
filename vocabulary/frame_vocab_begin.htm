@@ -249,7 +249,7 @@
         <p class="notify"> That is correct </p>
         <input type="submit" value="Continue" class="submit" id="continue" onclick="showNextQuestion()"/>
     </div>
-    <div id="noselect" id="NotSubmit" style="display:none;"> 
+    <div id="noselect" class="NotSubmit" style="display:none;"> 
          <p>Please select an answer before submitting.</p>
      </div>
     
@@ -324,7 +324,7 @@
              // when answer is wrong
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
-           var label (style=class:"notify")= document.querySelector(selector);
+           var label = document.querySelector(selector);
            document.getElementById("correctanswer").innerHTML = label.innerHTML;
            document.getElementById("Wrong").style.display = "block";
          };
