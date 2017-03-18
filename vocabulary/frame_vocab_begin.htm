@@ -40,8 +40,8 @@
         <br />
      </form>
     </div>
-    <div id="Perfidious1" style="display:none;">
-            <p> What is the meaning of "PERIFIDIOUS"?</p>
+    <div class="choices1" id="Perfidious1" style="display:none;">
+            <p class="question"> What is the meaning of "PERIFIDIOUS"?</p>
              <form> 
                 <input type="radio" name="q2choices" id="q2a0" /><label for="q2a0">Untrustworthy</label>
                 <br />
@@ -54,7 +54,7 @@
             </form>
        </div>
         <div id="Esoteric1" style="display:none;">
-            <p>What is the meaning of "ESOTERIC"?</p>
+            <p class="question">What is the meaning of "ESOTERIC"?</p>
              <form> 
                 <input type="radio" name="q3choices" id="q3a0" /><label for="q3a0">Overly dramatic</label>
                 <br />
@@ -67,7 +67,7 @@
             </form>
        </div>
        <div id="Obdurate1" style="display:none;">
-            <p> What is the meaning of "OBDURATE"?</p>
+            <p class="question"> What is the meaning of "OBDURATE"?</p>
              <form> 
                 <input type="radio" name="q4choices" id="q4a0" /><label for="q4a0">Casual/not being seriosus about something taken seriously by others</label>
                 <br />
@@ -80,7 +80,7 @@
             </form>
        </div>        
         <div id="Abdicate1" style="display:none;">
-            <p> What is the meaning of "ABDICATE"?</p>
+            <p class="question"> What is the meaning of "ABDICATE"?</p>
              <form> 
                 <input type="radio" name="q5choices" id="q5a0" /><label for="q5a0">Stubborn/impolite</label>
                 <br />
@@ -93,7 +93,7 @@
             </form>
         </div>
         <div id="Idyllic1" style="display:none;">
-            <p> What is the meaning of "IDYLLIC"?</p>
+            <p class="question"> What is the meaning of "IDYLLIC"?</p>
              <form> 
                 <input type="radio" name="q6choices" id="q6a0" /><label for="q6a0">Idolize/Adore</label>
                 <br />
@@ -106,7 +106,7 @@
             </form>
         </div>
         <div id="Assail1" style="display:none;">
-            <p> What is the meaning of "ASSSAIL"?</p>
+            <p class="question"> What is the meaning of "ASSSAIL"?</p>
              <form> 
                 <input type="radio" name="q7choices" id="q7a0" /><label for="q7a0">Attack/criticize</label>
                 <br />
@@ -119,7 +119,7 @@
             </form>
         </div>
         <div id="Nuance1" style="display:none;">
-            <p> What is the meaning of "NUANCE"?</p>
+            <p class="question"> What is the meaning of "NUANCE"?</p>
              <form> 
                 <input type="radio" name="q8choices" id="q8a0" /><label for="q8a0">A lively/cheerful event</label>
                 <br />
@@ -133,7 +133,7 @@
     </div>
             
             <div id="Talisman1" style="display:none;">
-            <p> What is the meaning of "TALISMAN"?</p>
+            <p class="question"> What is the meaning of "TALISMAN"?</p>
              <form> 
                 <input type="radio" name="q9choices" id="q9a0" /><label for="q9a0">A valuable object</label>
                 <br />
@@ -147,7 +147,7 @@
        </div>
     
         <div id="Airy1" style="display:none;">
-            <p> What is the meaning of "AIRY"?</p>
+            <p class="question"> What is the meaning of "AIRY"?</p>
              <form> 
                 <input type="radio" name="q10choices" id="q10a0" /><label for="q10a0">Spacious/Casual</label>
                 <br />
@@ -160,7 +160,7 @@
             </form>    
        </div>
         <div id="Boisterous1" style="display:none;">
-            <p> What is the meaning of "BOISTEROUS"?</p>
+            <p class="question"> What is the meaning of "BOISTEROUS"?</p>
              <form> 
                 <input type="radio" name="q11choices" id="q11a0" /><label for="q11a0">Not trustworthy</label>
                 <br />
@@ -174,7 +174,7 @@
        </div>
     
     <div id="Adduce1" style="display:none;">
-            <p> What is the meaning of "ADDUCE"?</p>
+            <p class="question"> What is the meaning of "ADDUCE"?</p>
              <form> 
                 <input type="radio" name="q12choices" id="q12a0" /><label for="q12a0">Cite as evidence/proof</label>
                 <br />
@@ -187,7 +187,7 @@
             </form>        
        </div>
     <div id="Histrionic1" style="display:none;">
-            <p> What is the meaning of "HISTRIONIC"?</p>
+            <p class="question"> What is the meaning of "HISTRIONIC"?</p>
              <form> 
                 <input type="radio" name="q13choices" id="q13a0" /><label for="q13a0">A Lively Event</label>
                 <br />
@@ -201,7 +201,7 @@
        </div>    
     
         <div id="Plaudit1" style="display:none;">
-            <p> What is the meaning of "PLAUDIT"?</p>
+            <p class="question"> What is the meaning of "PLAUDIT"?</p>
              <form> 
                 <input type="radio" name="q14choices" id="q14a0" /><label for="q14a0">Praise</label>
                 <br />
@@ -215,7 +215,7 @@
        </div>
     
         <div id="Aeronautics1" style="display:none;">
-            <p> What is the meaning of "AERONAUTICS"?</p>
+            <p class="question"> What is the meaning of "AERONAUTICS"?</p>
              <form> 
                 <input type="radio" name="q15choices" id="q15a0" /><label for="q15a0">The Act of Travelling Through Water</label>
                 <br />
@@ -229,7 +229,7 @@
                        
        </div>
        
-       <input type="submit" value="Submit" id="submit" onclick="submitanswer()" style="display:none" />
+       <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none" />
        <div id="Ending" style="display:none;"> 
            <p> You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
@@ -238,18 +238,18 @@
     </div>      
      <div id="Expired" style="display:none;">
           <p> Your time has expired, so you can not finish the test </p>
-          <input type="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
+          <input type="submit" class="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
      </div>
      <div id="Wrong" style="display:none;">
           <p> Sorry, that is incorrect. The correct answer is <br> </p>
          <div id="correctanswer"> </div>
-         <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
+         <input type="submit" class="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
      </div>
     <div id="Correct" style="display:none;">
         <p> That is correct </p>
-        <input type="submit" value="Continue" id="continue" onclick="showNextQuestion()"/>
+        <input type="submit" value="Continue" class="submit" id="continue" onclick="showNextQuestion()"/>
     </div>
-    <div id="noselect" style="display:none;"> 
+    <div id="noselect" id="NotSubmit" style="display:none;"> 
          <p>Please select an answer before submitting.</p>
      </div>
     
