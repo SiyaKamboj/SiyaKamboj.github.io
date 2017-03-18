@@ -249,7 +249,7 @@
         <p class="notify"> That is correct </p>
         <input type="submit" value="Continue" class="submit" id="continue" onclick="showNextQuestion()"/>
     </div>
-    <div id="noselect" class="NotSubmit" style="display:none;"> 
+    <div id="NotSubmit" style="display:none;"> 
          <p>Please select an answer before submitting.</p>
      </div>
     
@@ -330,7 +330,7 @@
          };
        } else {
            // when no radio button is selected and "submit" is clicked.
-         document.getElementById("noselect").style.display = "block";
+         document.getElementById("NotSubmit").style.display = "block";
          document.getElementById("submit").style.display = "block";
        };
      };
