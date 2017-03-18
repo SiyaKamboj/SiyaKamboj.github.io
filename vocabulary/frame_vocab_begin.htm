@@ -289,10 +289,10 @@
        var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
        var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
          //css
-         minutes.style.fontSize="100%";
+         /*minutes.style.fontSize="100%";
          minutes.style.color="red";
          seconds.style.fontSize="100%";
-         seconds.style.color="red";
+         seconds.style.color="red";*/
        // Output the result in an element with id="demo"
        document.getElementById("timer").innerHTML = "Time remaining: " + minutes + " mins and " + seconds + " secs.";
        test_time_mins = 9 - minutes;
@@ -330,6 +330,8 @@
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
            var label = document.querySelector(selector);
+            label.style.["webkit-font-size"]="100%";
+             label.style.["-webkit-text-align"]="center";
            document.getElementById("correctanswer").innerHTML = label.innerHTML;
            document.getElementById("Wrong").style.display = "block";
          };
