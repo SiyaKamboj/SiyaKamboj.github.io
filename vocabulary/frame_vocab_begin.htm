@@ -324,7 +324,7 @@
              // when answer is wrong
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
-           var label = document.querySelector(selector);
+           var label (style=class:"notify")= document.querySelector(selector);
            document.getElementById("correctanswer").innerHTML = label.innerHTML;
            document.getElementById("Wrong").style.display = "block";
          };
