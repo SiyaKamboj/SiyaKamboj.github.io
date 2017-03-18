@@ -24,6 +24,12 @@ form{
   color:red;
   font-style:italic;
   margin-left:42%;
+}
+
+.notify{
+  color:red;
+  font-size:100%;
+  text-align:center;
 };
 
 
