@@ -22,14 +22,12 @@ form{
 
 #NotSubmit{
   color:red;
-  font-style:italic;
-  margin-left:42%;
+  font-style:italic;  
 }
 
 .notify{
   color:red;
-  font-size:100%;
-  text-align:center;
+  font-size:100%;  
 };
 
 
