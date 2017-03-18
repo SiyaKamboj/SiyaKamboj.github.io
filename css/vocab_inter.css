@@ -25,6 +25,12 @@ form{
   font-style:italic;  
 }
 
+.continue{
+  margin-left:45%;
+  background-color: darksalmon;
+  color:black;
+}
+
 .notify{
   color:red;
   font-size:100%;  
