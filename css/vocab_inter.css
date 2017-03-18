@@ -20,10 +20,10 @@ form{
     color: white;
 }
 
-#NotSubmit{
+/*#NotSubmit{
   color:red;
   font-style:italic;  
-}
+}*/
 
 .continue{  
   background-color: darksalmon;
@@ -31,10 +31,10 @@ form{
   margin-left:8%;
 }
 
-.notify{
+/*.notify{
   color:red;
   font-size:100%;  
-};
+};*/
 
 
 
