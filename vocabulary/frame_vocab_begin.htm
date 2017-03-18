@@ -330,8 +330,8 @@
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
            var label = document.querySelector(selector);
-            label.style.["webkit-font-size"]="100%";
-             label.style.["-webkit-text-align"]="center";
+            label.style["webkit-font-size"]="100%";
+             label.style["-webkit-text-align"]="center";
            document.getElementById("correctanswer").innerHTML = label.innerHTML;
            document.getElementById("Wrong").style.display = "block";
          };
