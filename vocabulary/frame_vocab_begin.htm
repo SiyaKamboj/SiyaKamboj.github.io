@@ -269,7 +269,7 @@
      var n = d.getTime();
      starttimer(n);
      var score = 0;
-     //randomize();
+     randomize();
      document.getElementById("initial").style.display = "none";
      document.getElementById(questions[0]).style.display = "block";
      document.getElementById('submit').style.display = "block";
@@ -314,13 +314,13 @@
    }
 
    function submitanswer() {     
-     document.getElementById("submit").style.display = "none";
+     document.getElementById("submit").style.display = "none";       
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
          // when a radio button is checked, do the following         
          document.getElementById("NotSubmit").style.display = "none";
-           document.getElementById("submit").disabled=true;
+           //document.getElementById("submit").disabled=true;
          var useranswer = radios[i].value;
          if (i == correctans[question_number]) {
              //if user selected answer is the right one
