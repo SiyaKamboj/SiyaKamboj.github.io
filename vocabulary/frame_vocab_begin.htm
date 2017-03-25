@@ -320,11 +320,13 @@
        if (radios[i].checked) {
          // when a radio button is checked, do the following         
          document.getElementById("NotSubmit").style.display = "none";
+           document.getElementById("submit").disabled=true;
          var useranswer = radios[i].value;
          if (i == correctans[question_number]) {
              //if user selected answer is the right one
            score += 10;           
            document.getElementById("Correct").style.display = "block";
+             
          } else {
              // when answer is wrong
            var correctanschoicenum = correctans[question_number];
