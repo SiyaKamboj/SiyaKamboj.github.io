@@ -329,6 +329,7 @@ function starttimer() {
 }
 function timerpause() {
     // pauses countdown
+    test_time_secs= 600-count;
     clearTimeout(t);
 }
    
@@ -401,7 +402,7 @@ function timerpause() {
        document.getElementById('submit').style.visibility = "visible";
      };
      if (question_number == questions.length-1) {
-       document.getElementById("timer").innerHTML = "Time taken: " + test_time_mins + " mins and " + test_time_secs + " secs.";
+       document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
        document.getElementById('submit').style.visibility = "hidden";
      };
      document.getElementById(questions[question_number]).style.display = "block";
