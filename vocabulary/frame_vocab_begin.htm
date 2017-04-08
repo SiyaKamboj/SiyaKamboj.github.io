@@ -314,9 +314,9 @@ var x ;
 var t, mins, secs;
 var count=600;
 function timerdisplay() {
-    var mins=(count-30)/60;
+    var mins=math.floor(count/60);
     var secs=count % 60;
-    document.getElementById('timer').innerHTML ='Time left: ' + mins.toFixed(0) + ' minutes and ' + secs.toFixed(0) + ' seconds.';
+    document.getElementById('timer').innerHTML ='Time left: ' + mins + ' minutes and ' + secs.toFixed(0) + ' seconds.';
 }
 
 function starttimer() {
