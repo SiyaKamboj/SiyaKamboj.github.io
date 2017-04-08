@@ -311,11 +311,12 @@ var x ;
        document.getElementById("timer").style.display = "none";
      };
    }*/
-var t, mins;
+var t, mins, secs;
 var count=600;
 function timerdisplay() {
     var mins=count/60;
-    document.getElementById('timer').innerHTML ='Time left: ' + mins.toFixed(0) + ' minutes and ' + 600-count+ ' seconds.';
+    var secs=600-count;
+    document.getElementById('timer').innerHTML ='Time left: ' + mins.toFixed(0) + ' minutes and ' + secs+ ' seconds.';
 }
 
 function starttimer() {
