@@ -334,6 +334,22 @@ function timerpause() {
     test_time_secs= 600-count;
     clearTimeout(t);
 }
+    
+if (count<0) {
+    clearTimeout(t);
+    document.getElementById("timer").innerHTML = "TIME UP!";
+     document.getElementById("submit").style.display = "none";
+     document.getElementById(questions[question_number]).style.display = "none";
+     document.getElementById("Correct").style.display="none";
+      document.getElementById("Ending").style.display = "block";
+   }
+    
+if (question_number==15) {
+   clearTimeout(t);   
+    timerpause();
+    document.getElementById("timer").style.display = "none";
+}
+    
    
 
         
