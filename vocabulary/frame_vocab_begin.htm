@@ -325,6 +325,11 @@ function starttimer() {
     timerdisplay();
     if (count === 0) {
         // time is up
+      document.getElementById("timer").innerHTML = "TIME UP!";
+     document.getElementById("submit").style.display = "none";
+     document.getElementById("QFrame").style.display = "none";//questions[question_number] not QFrame
+     document.getElementById("Correct").style.display="none";
+      document.getElementById("Ending").style.display = "block";
     } else {
         count--;
         t = setTimeout(starttimer, 1000);
@@ -336,14 +341,14 @@ function timerpause() {
     clearTimeout(t);
 }
     
-if (count==0) {
+/*if (count==0) {
     //clearTimeout(t);
     document.getElementById("timer").innerHTML = "TIME UP!";
      document.getElementById("submit").style.display = "none";
      document.getElementById("QFrame").style.display = "none";//questions[question_number] not QFrame
      document.getElementById("Correct").style.display="none";
       document.getElementById("Ending").style.display = "block";
-   }
+   }*/
     
 if (question_number==15) {
     clearInterval(t);
@@ -393,6 +398,7 @@ if (question_number==15) {
        if (question_number==14) {
            timerpause();
        };
+       
    }
 
    function randomize() {
@@ -429,14 +435,7 @@ if (question_number==15) {
      };
      document.getElementById(questions[question_number]).style.display = "block";
      document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
-     if (count==0) {
-        //clearTimeout(t);
-        document.getElementById("timer").innerHTML = "TIME UP!";
-        document.getElementById("submit").style.display = "none";
-        document.getElementById("QFrame").style.display = "none";//questions[question_number] not QFrame
-        document.getElementById("Correct").style.display="none";
-        document.getElementById("Ending").style.display = "block";
-     }
+     
 
    };
 
