@@ -330,7 +330,8 @@ function starttimer() {
      document.getElementById("submit").style.display = "none";
      document.getElementById(questions[question_number]).style.display = "none";//questions[question_number] not QFrame
      document.getElementById("Correct").style.display="none";
-      document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
+      //document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
+        document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
     } else {
         count--;
         t = setTimeout(starttimer, 1000);
