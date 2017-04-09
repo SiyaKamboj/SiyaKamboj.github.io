@@ -228,6 +228,7 @@
             </form>
                        
        </div>
+        
        
        <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none" />
     </div>
@@ -327,7 +328,7 @@ function starttimer() {
         // time is up
       document.getElementById("timer").innerHTML = "TIME UP!";
      document.getElementById("submit").style.display = "none";
-     document.getElementById("QFrame").style.display = "none";//questions[question_number] not QFrame
+     document.getElementById(questions[question_number]).style.display = "none";//questions[question_number] not QFrame
      document.getElementById("Correct").style.display="none";
       document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
     } else {
