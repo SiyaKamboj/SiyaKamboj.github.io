@@ -230,11 +230,12 @@
        </div>
        
        <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none" />
+    </div>
        <div id="Ending" style="display:none;"> 
            <p> You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
        
-    </div>
+
     </div>      
      <div id="Expired" style="display:none;">
           <p> Your time has expired, so you can not finish the test </p>
@@ -251,7 +252,7 @@
     </div>
     <div id="NotSubmit" style="display:none; font-color:red; font-size:100%; margin-left:40%"> 
          <p>Please select an answer before submitting.</p>
-     </div>
+    </div>
     
 <script> 
    var questions = ["Abhor1", "Perfidious1", "Esoteric1", "Obdurate1", "Abdicate1", "Idyllic1", "Assail1", "Nuance1", "Talisman1", "Airy1", "Boisterous1", "Adduce1", "Histrionic1", "Plaudit1", "Aeronautics1", "Ending"];
@@ -345,9 +346,12 @@ if (count<0) {
    }
     
 if (question_number==15) {
+    clearInterval(t);
    clearTimeout(t);   
     timerpause();
+    document.getElementById("QFrame").style.display="none";
     document.getElementById("timer").style.display = "none";
+    document.getElementById("Ending").style.display="block";
 }
     
    
