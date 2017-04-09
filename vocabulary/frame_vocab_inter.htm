@@ -335,7 +335,7 @@ function starttimer() {
         document.getElementById("Ending").style.display="block";
         document.getElementById("EndScore").style.display="block";
         document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10;*/
-       count=10; 
+        
       showNextQuestion();
     } else {
         count--;
@@ -427,6 +427,7 @@ if (question_number==15) {
    }
     
    function showNextQuestion() {
+       count=10;
      var d = new Date();
      var n = d.getTime();
      starttimer(n);
