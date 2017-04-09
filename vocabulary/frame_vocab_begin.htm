@@ -313,7 +313,7 @@ var x ;
      };
    }*/
 var t, mins, secs;
-var count=100;//600
+var count=50;//600
 function timerdisplay() {
     var mins=Math.floor(count/60);
     var secs=count % 60;
@@ -336,7 +336,7 @@ function timerpause() {
     clearTimeout(t);
 }
     
-if (count<0) {
+if (count==0) {
     clearTimeout(t);
     document.getElementById("timer").innerHTML = "TIME UP!";
      document.getElementById("submit").style.display = "none";
