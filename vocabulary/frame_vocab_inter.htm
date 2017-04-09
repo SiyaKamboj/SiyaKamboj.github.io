@@ -443,6 +443,7 @@ if (question_number==15) {
      if (question_number == questions.length-1) {
        document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
        document.getElementById('submit').style.visibility = "hidden";
+       timerpause();
      };
      document.getElementById(questions[question_number]).style.display = "block";
      document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
