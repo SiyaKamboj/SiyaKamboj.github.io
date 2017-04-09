@@ -292,6 +292,7 @@ function starttimer() {
     if (count === 0) {
         // time is up
        clearTimeout(t); 
+        clearInterval(t);
       showNextQuestion();
     } else {
         count--;
