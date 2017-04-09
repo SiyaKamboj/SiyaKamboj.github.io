@@ -267,9 +267,9 @@
    //document.getElementById("options").style.display="none";
    function vocabbeginnerstart() {
      //var frame=document.getElementById("frame_a");
-     var d = new Date();
-     var n = d.getTime();
-     starttimer(n);
+     //var d = new Date();
+     //var n = d.getTime();
+     starttimer();
      var score = 0;
      randomize();
      document.getElementById("initial").style.display = "none";
@@ -278,42 +278,7 @@
 
    }
 var x ;
-   /*function starttimer(n) {
-     // Set the date we're counting down to
-     var TestEndTime = n + 10 * 1000 * 60; //10 minutes is 60*1000*10 miliseconds-Actual: var TestEndTime = n+10*1000*60;
-     // Update the count down every 1 second
-      x = setInterval(function() {
-       // Get todays date and time
-       var now = new Date().getTime();
-       // Find the distance between now an the count down date
-       var remainingTime = TestEndTime - now;
-       // Time calculations for days, hours, minutes and seconds
-       var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-       var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-         //css         
-       // Output the result in an element with id="demo"
-       document.getElementById("timer").innerHTML = "Time remaining: " + minutes + " mins and " + seconds + " secs.";
-       test_time_mins = 9 - minutes;
-       test_time_secs = 60 - seconds;
-
-       // If the count down is over, write some text 
-       if (remainingTime < 0) {
-         clearInterval(x);
-         document.getElementById("timer").innerHTML = "TIME UP!";
-         document.getElementById("submit").style.display = "none";
-         document.getElementById(questions[question_number]).style.display = "none";
-         document.getElementById("Correct").style.display="none";
-         document.getElementById("Ending").style.display = "block";
-       }
-     }, 1000);
-     if (question_number == 15) {
-       //clearInterval(x);
-       //clearTimeout(x);
-         stoptimer();
-       document.getElementById("timer").style.display = "none";
-     };
-   }*/
-var t, mins, secs;
+ var t, mins, secs;
 var count=10;//600
 function timerdisplay() {
     var mins=Math.floor(count/60);
@@ -326,15 +291,6 @@ function starttimer() {
     timerdisplay();
     if (count === 0) {
         // time is up
-        /*document.getElementById("timer").innerHTML = "TIME UP!";
-        document.getElementById("submit").style.display = "none";
-        document.getElementById(questions[question_number]).style.display = "none";//questions[question_number] not QFrame
-        document.getElementById("Correct").style.display="none";
-        document.getElementById("Wrong").style.display="none";
-      //document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
-        document.getElementById("Ending").style.display="block";
-        document.getElementById("EndScore").style.display="block";
-        document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10;*/
        clearTimeout(t); 
       showNextQuestion();
     } else {
@@ -349,15 +305,7 @@ function timerpause() {
     document.getElementById("timer").style.display="none";
 }
     
-/*if (count==0) {
-    //clearTimeout(t);
-    document.getElementById("timer").innerHTML = "TIME UP!";
-     document.getElementById("submit").style.display = "none";
-     document.getElementById("QFrame").style.display = "none";//questions[question_number] not QFrame
-     document.getElementById("Correct").style.display="none";
-      document.getElementById("Ending").style.display = "block";
-   }*/
-    
+
 if (question_number==15) {
     clearInterval(t);
    clearTimeout(t);   
@@ -368,10 +316,6 @@ if (question_number==15) {
 }
     
    
-
-        
-        
-
    function submitanswer() {     
      document.getElementById("submit").style.display = "none";       
      var radios = document.getElementsByName(choices[question_number]);
@@ -428,10 +372,10 @@ if (question_number==15) {
    }
     
    function showNextQuestion() {
-       count=10;
-     var d = new Date();
-     var n = d.getTime();
-     starttimer(n);
+     count=10;
+     //var d = new Date();
+     //var n = d.getTime();
+     starttimer();
      document.getElementById("NotSubmit").style.display = "none";
      document.getElementById("Wrong").style.display = "none";
      document.getElementById("Correct").style.display = "none";
