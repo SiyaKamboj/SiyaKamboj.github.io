@@ -326,12 +326,13 @@ function starttimer() {
     timerdisplay();
     if (count === 0) {
         // time is up
-      document.getElementById("timer").innerHTML = "TIME UP!";
-     document.getElementById("submit").style.display = "none";
-     document.getElementById(questions[question_number]).style.display = "none";//questions[question_number] not QFrame
-     document.getElementById("Correct").style.display="none";
+        document.getElementById("timer").innerHTML = "TIME UP!";
+        document.getElementById("submit").style.display = "none";
+        document.getElementById(questions[question_number]).style.display = "none";//questions[question_number] not QFrame
+        document.getElementById("Correct").style.display="none";
+        document.getElementById("Wrong").style.display="none";
       //document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
-        document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
+        document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10;
     } else {
         count--;
         t = setTimeout(starttimer, 1000);
