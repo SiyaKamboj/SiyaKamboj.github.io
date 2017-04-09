@@ -344,8 +344,9 @@ function starttimer() {
 }
 function timerpause() {
     // pauses countdown
-    test_time_secs= 600-count;
+    test_time_secs= 10-count;
     clearTimeout(t);
+    document.getElementById("timer").style.display="none";
 }
     
 /*if (count==0) {
