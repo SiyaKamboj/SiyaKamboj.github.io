@@ -7,18 +7,22 @@
 h1 {
     text-align:center;
     margin-top:2%;
+    font-family: verdana, Times New Roman;
 }
 
 form{
   margin-left:40%;
   font-size:115%;
+  font-family: verdana, Times New Roman;
 }
 
 .submit{    
     background-color: tomato;     
     margin-left:45%;  
-    color: white;
+    color: black;
+  font-family: verdana, Times New Roman;
 }
+
 
 /*#NotSubmit{
   color:red;
@@ -29,6 +33,7 @@ form{
   background-color: darksalmon;
   color:black;
   margin-left:8%;
+  font-family: verdana, Times New Roman;
 }
 
 /*.notify{
