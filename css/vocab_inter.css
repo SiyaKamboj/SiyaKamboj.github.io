@@ -41,6 +41,22 @@ form{
   font-size:100%;  
 };*/
 
+#Wrong{
+  font-family: verdana, Times new Roman;
+}
+
+#Correct{
+  font-family: verdana, Times New Roman;
+}
+
+#NotSubmit{
+  font-family: verdana, Times new Roman;
+}
+
+#Expired{
+  font-family:verdana, Times new Roman;
+};
+
 
 
 
