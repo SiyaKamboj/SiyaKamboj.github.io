@@ -1,6 +1,7 @@
 h1 {
     text-align:center;
     margin-top:1.5em;
+    font-family: verdana, times new roman;
 }
 
 #Science {    
@@ -53,21 +54,26 @@ h1 {
 .name_levels{    
     position:relative;
     font-size:150%;
+    font-family: verdana, times new roman;
     
 }
 
 .name_levels:link{
-    color:black;    
+    color:black; 
+    font-family: verdana, times new roman;
 }
 
 .name_levels:visited{
     color:mediumslateblue;
     text-decoration:underline;
+    font-family: verdana, times new roman;
 }
+
 
 .name_levels:hover{
     color:gray;
     text-decoration:none;
+    font-family: verdana, times new roman;
 };
 
 img{
