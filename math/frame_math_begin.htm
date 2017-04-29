@@ -1,200 +1,75 @@
 <html>
   <link type="text/css" rel="stylesheet" href="/css/math_frame.css">
-  <head> 
+
+  <head>
     <title> Beginner Section of Math </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="https://siyakamboj.github.io/math/frame_math_begin.htm"> </script>
-</head>
-<body>
-  <div id="pop_up_6_point_graph" style="display:none; ">
-  <div id="pageone" data-role="main" class="ui-content">    
-    <a href="#myPopup" data-rel="popup" data-position-to="window">
-    <img src="/math/images/6_point_graph.png" alt="Graph View" style="width:22%;height:75%;"></a>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="math_begin.js"></script>    
+  </head>
 
-    <div data-role="popup" id="myPopup">   
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="/math/images/6_point_graph.png" style="height:95%;width:42%;"  alt="Graph" usemap="#graphmap">
+  <body>
+    <div id="pop_up_6_point_graph" style="display:none; ">
+      <div id="pageone" data-role="main" class="ui-content">
+        <a href="#myPopup" data-rel="popup" data-position-to="window">
+          <img src="/math/images/6_point_graph.png" alt="Graph View" style="width:22%;height:75%;"></a>
+
+        <div data-role="popup" id="myPopup">
+          <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="/math/images/6_point_graph.png" style="height:95%;width:42%;" alt="Graph" usemap="#graphmap">
+        </div>
+      </div>
     </div>
-  </div>  
-  </div>
- <!-- <div id="Obdurate1" style="display:none;">
-            <p class="question"> What is the meaning of "OBDURATE"?</p>
-             <form> 
-                <input type="radio" name="q4choices" id="q4a0" /><label for="q4a0">Casual/not being seriosus about something taken seriously by others</label>
-                <br />
-                <input type="radio" name="q4choices" id="q4a1" /><label for="q4a1">Fail to fulfill a duty</label>
-                <br />
-                <input type="radio" name="q4choices" id="q4a2" /><label for="q4a2">Praise</label>
-                <br />
-                <input type="radio" name="q4choices" id="q4a3" /><label for="q4a3">None of the above</label>
-                <br />
-            </form>
-       </div>   !-->   
-  <div id="Initial" >
-    <p> Placeholder </p>
-    <button onclick="mathbegin()">Start the Test </button>
-  </div>
-  
-  <div id="25x32" style="display:none;">
-    <p class="question"> What is the product of 25 and 32? </p>
-    <form>
-      <input type="text" id="text_answer">
-    </form>
-  </div>
-  <div id="25x32_sol" style="display:none;">
-    <p> The corret answer is 800 </p>
-    <p>  25 </p>
-    <p>* 32 </p>
-    <p>-----</p>
-    <p>+ 50 <p>
-    <p> 750 </p>
-    <p>-----</p>
-    <p> 800 </p>
-    <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()"/>
-  </div>
-  <div id="1/2*1/2" style="display:none;">
-    <p> Enter 1/2 * 1/2 in its simplest fraction form</p>
-    <input type="text" id="text_answer">
-  </div>
-  <div id="1/2*1/2_sol" style="display:none;">
-    <p> The correct answer is 1/4</p>
-    <p> Something </p>
-    <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()"/>
-    <div>
-      
-      <div id="NotSubmit" style="display:none;">
-        <p> Please give an answer before submitting </p>        
-      </div>
-      
-      <div id="correct" style="display:none;">
-        <p> The answer is correct </p>
-        <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()"/>
-      </div>
-    
-   <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none" />
-   
 
-<!--<map name="graphmap">
-  <area shape="rect" coords="20, 30, 10, 10" alt="Point1" >
- <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
-  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
-</map>!-->
-  
+    <div id="Initial">
+      <p> Placeholder </p>
+      <input type="button" value="Start The Test" onclick="mathbegin()"/>
+    </div>
 
-<script>
-  /*var questions=["25x32", "1/2*1/2"];
-  var correctans=["800", "1/4"];
-   var solution=["25x32_sol", "1/2*1/2_sol"];*/
-  
-  function mathbegin() {
-    var d = new Date();
-     var n = d.getTime();
-     starttimer(n);
-     var score = 0;
-     randomize();
-    document.getElementById("Initial").style.display="none";
-    document.getElementById(questions[0]).style.display = "block";
-     document.getElementById('submit').style.display = "block";
-  }
-  
-  var t, mins, secs;
-var count=600;//600
-function timerdisplay() {
-    var mins=Math.floor(count/60);
-    var secs=count % 60;
-    document.getElementById('timer').innerHTML ='Time left: ' + mins + ' minutes and ' + secs.toFixed(0) + ' seconds.';
-}
-function starttimer() {
-    // starts countdown
-    timerdisplay();
-    if (count === 0) {
-        // time is up
-        document.getElementById("timer").innerHTML = "TIME UP!";
-        document.getElementById("submit").style.display = "none";
-        document.getElementById(questions[question_number]).style.display = "none";//questions[question_number] not QFrame
-        document.getElementById("Correct").style.display="none";
-        document.getElementById("Wrong").style.display="none";
-      //document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
-        document.getElementById("Ending").style.display="block";
-        document.getElementById("EndScore").style.display="block";
-        document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10;
-    } else {
-        count--;
-        t = setTimeout(starttimer, 1000);
-    }
-}
-function timerpause() {
-    // pauses countdown
-    test_time_secs= 600-count;
-    clearTimeout(t);
-}
-if (question_number==15) {
-    clearInterval(t);
-   clearTimeout(t);   
-    timerpause();
-    document.getElementById("QFrame").style.display="none";
-    document.getElementById("timer").style.display = "none";
-    document.getElementById("Ending").style.display="block";
-}
-    
-   
+    <div id="25x32" style="display:none;">
+      <p class="question"> What is the product of 25 and 32? </p>
+      <form>
+        <input type="text" id="text_answer"/>
+      </form>
+    </div>
+    <div id="25x32_sol" style="display:none;">
+      <p> The correct answer is 800 </p>
+      <p> 25 </p>
+      <p>*32 </p>
+      <p>-----</p>
+      <p>+ 50 </p>        
+       <p> 750 </p>
+       <p>-----</p>
+       <p> 800 </p>
+       <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
+    </div>
+    <div id="1/2*1/2" style="display:none;">
+      <p> Enter 1/2 * 1/2 in its simplest fraction form</p>
+      <input type="text" id="text_answer"/>
+    </div>
+    <div id="1/2*1/2_sol" style="display:none;">
+      <p> The correct answer is 1/4</p>
+      <p> Something </p>
+      <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
+    </div>
 
-  
-function  randomize() {
-  var j, x, i, y, z;
-     for (i = questions.length - 1; i; i--) {
-       j = Math.floor(Math.random() * i);
-       x = questions[i - 1];
-       y = correctans[i - 1];
-       z = solution[i - 1];
-       //swapped 2 variables 
-       questions[i - 1] = questions[j];
-       correctans[i - 1] = correctans[j];
-       solution[i - 1] = solution[j];
-       questions[j] = x;
-       correctans[j] = y;
-       solution[j] = z;
-     };
-   } 
-  
-  function submitanswer() {     
-     document.getElementById("submit").style.display = "none";   
-    var text= document.getElementById("text_answer");     
-       if (text.value=='') {
-         // when no text is entered and "submit" is clicked.
-         document.getElementById("NotSubmit").style.display = "block";
-         document.getElementById("submit").style.display = "block";
-         
-       } else {        
-         // when a text button is written on, do the following         
-         document.getElementById("NotSubmit").style.display = "none";
-           //document.getElementById("submit").disabled=true;
-         var useranswer = text.value;
-         if (useranswer == correctans[question_number]) {
-             //if user selected answer is the right one
-           score += 10;           
-           document.getElementById("Correct").style.display = "block";
-             document.getElementById("NotSubmit").style.display="none";
-             
-         } else {
-             // when answer is wrong
-           document.getElementById(solution[question_number]).style.display="block";
-           
-         };
-       };
-     };
-       if (question_number==14) {
-           timerpause();
-       };
-       
-   }
-   
-      </script>
-  
-   </body>
-    
-  
-  
-  
+        <div id="NotSubmit" style="display:none;">
+          <p> Please give an answer before submitting </p>
+        </div>
+
+        <div id="correct" style="display:none;">
+          <p> The answer is correct </p>
+          <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
+        </div>
+
+        <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none;" />
+
+
+        
+
+
+
+  </body>
+
+</html>
