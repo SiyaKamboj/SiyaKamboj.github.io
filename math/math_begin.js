@@ -99,7 +99,7 @@ function submitanswer() {
 
     };
   };
-};
+
 if (question_number == 14) {
   timerpause();
 };
