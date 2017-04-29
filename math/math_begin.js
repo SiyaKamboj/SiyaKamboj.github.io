@@ -1,6 +1,7 @@
 var questions = ["25x32", "1/2*1/2"];
 var correctans = ["800", "1/4"];
 var solution = ["25x32_sol", "1/2*1/2_sol"];
+var question_number=0;
 
 function mathbegin() {
   var d = new Date();
@@ -54,6 +55,26 @@ if (question_number == 15) {
   document.getElementById("timer").style.display = "none";
   document.getElementById("Ending").style.display = "block";
 }
+
+function showNextQuestion() {
+     document.getElementById("NotSubmit").style.display = "none";
+     document.getElementById("Wrong").style.display = "none";
+     document.getElementById("Correct").style.display = "none";
+     document.getElementById("submit").style.display = "block";
+     document.getElementById(questions[question_number]).style.display = "none";
+     if (question_number < questions.length - 1) {
+       question_number = question_number + 1;
+       document.getElementById('submit').style.visibility = "visible";
+     };
+     if (question_number == questions.length-1) {
+       document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
+       document.getElementById('submit').style.visibility = "hidden";
+     };
+     document.getElementById(questions[question_number]).style.display = "block";
+     document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
+     
+   };
+
 
 
 
