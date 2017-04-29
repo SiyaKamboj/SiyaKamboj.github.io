@@ -8,7 +8,7 @@
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-  <div id="pop_up_6_point_graph">
+  <div id="pop_up_6_point_graph" style="display:none; ">
   <div id="pageone" data-role="main" class="ui-content">    
     <a href="#myPopup" data-rel="popup" data-position-to="window">
     <img src="/math/images/6_point_graph.png" alt="Graph View" style="width:22%;height:75%;"></a>
@@ -51,6 +51,7 @@
     <p> 750 </p>
     <p>-----</p>
     <p> 800 </p>
+    <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()"/>
   </div>
   <div id="1/2*1/2" style="display:none;">
     <p> Enter 1/2 * 1/2 in its simplest fraction form</p>
@@ -59,17 +60,20 @@
   <div id="1/2*1/2_sol" style="display:none;">
     <p> The correct answer is 1/4</p>
     <p> Something </p>
+    <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()"/>
     <div>
       
       <div id="NotSubmit" style="display:none;">
-        <p> Please give an answer before submitting </p>
+        <p> Please give an answer before submitting </p>        
       </div>
       
       <div id="correct" style="display:none;">
         <p> The answer is correct </p>
+        <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()"/>
       </div>
     
    <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none" />
+   
 
 <!--<map name="graphmap">
   <area shape="rect" coords="20, 30, 10, 10" alt="Point1" >
@@ -175,7 +179,8 @@ function  randomize() {
              
          } else {
              // when answer is wrong
-           //document.getEl
+           document.getElementById(solution[question_number]).style.display="block";
+           
          };
        };
      };
