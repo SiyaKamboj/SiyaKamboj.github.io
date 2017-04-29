@@ -1,6 +1,6 @@
 h1 {
     text-align:center;
-    margin-top:1.5em;
+    margin-top:1.5em;    
     font-family: verdana, times new roman;
 }
 
@@ -53,7 +53,7 @@ h1 {
 
 .name_levels{    
     position:relative;
-    font-size:150%;
+    font-size:110%;
     font-family: verdana, times new roman;
     
 }
