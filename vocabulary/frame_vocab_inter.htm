@@ -320,6 +320,7 @@ if (question_number==15) {
    function submitanswer() {     
      document.getElementById("submit").style.display = "none";       
      var radios = document.getElementsByName(choices[question_number]);
+	 timerpause();
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
          // when a radio button is checked, do the following         
