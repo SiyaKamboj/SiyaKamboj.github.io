@@ -113,7 +113,7 @@ function starttimer() {
       
  function showNextQuestion() {
      document.getElementById("NotSubmit").style.display = "none";
-     document.getElementById("Wrong").style.display = "none";
+     document.getElementById(solution[question_number]).style.display = "none";
      document.getElementById("Correct").style.display = "none";
      document.getElementById("submit").style.display = "block";
      document.getElementById(questions[question_number]).style.display = "none";
@@ -186,6 +186,7 @@ function submitanswer() {
     } else {
       // when answer is wrong
       document.getElementById(solution[question_number]).style.display = "block";
+      document.getElementById("submit").style.display="none";
 
     };
   };
