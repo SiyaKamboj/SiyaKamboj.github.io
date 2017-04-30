@@ -4,13 +4,13 @@ img{
 }
 
 #text_answer{
-  height: 20%;
-  width:10%;
+  height: 10%;
+  width:5%;
 }
 
 #submit{
-  height: 20%;
-  width:10%;
+  height: 10%;
+  width:5%;
   background-color: bisque;
   background-color: tomato;     
   margin-left:45%;  
@@ -19,8 +19,8 @@ img{
 }
 
 #start{
-  height: 20%;
-  width:10%;
+  height: 10%;
+  width:5%;
   background-color: coral;
 };
 
