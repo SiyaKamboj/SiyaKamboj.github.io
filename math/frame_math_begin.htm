@@ -61,7 +61,7 @@
           <p> The answer is correct </p>
           <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
         </div>
-            <input type="text" id="text_answer"/>
+            <input type="text" id="text_answer" style="display:none;"/>
         <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none;" />
     <div id="Ending" style="display:none;"> 
            <p> You finished the test. Your score is <br> </p>
@@ -127,6 +127,7 @@ function starttimer() {
      document.getElementById("NotSubmit").style.display = "none";
      document.getElementById(solution[question_number]).style.display = "none";
      document.getElementById("Correct").style.display = "none";
+     document.getElementById("text_answer").style.display="none";    
      document.getElementById("submit").style.display = "block";
      document.getElementById(questions[question_number]).style.display = "none";
      if (question_number < questions.length - 1) {
@@ -156,6 +157,7 @@ if (question_number == 2) { //15
   clearTimeout(t);
   timerpause();
   document.getElementById("QFrame").style.display = "none";
+  document.getElementById("text_answer").style.display="none";  
   document.getElementById("timer").style.display = "none";
   document.getElementById("Ending").style.display = "block";
 }
@@ -180,11 +182,11 @@ function randomize() {
 }
 
 function submitanswer() {
-  document.getElementById("submit").style.display = "none";
+  document.getElementById("submit").style.display = "none";  
   var text = document.getElementById("text_answer").value;
   if (text.length == 0) {
     // when no text is entered and "submit" is clicked.
-    alert("Please enter an answer.");
+   document.getElementById("NotSubmit").style.display="block";
     document.getElementById("submit").style.display = "block";
 
   } else {
@@ -206,6 +208,7 @@ function submitanswer() {
   };
 if (question_number == 2) { //14
   timerpause();
+  
 };
 
 };
