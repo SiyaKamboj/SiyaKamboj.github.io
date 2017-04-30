@@ -190,9 +190,8 @@ function submitanswer() {
   } else {
     // when a text button is written on, do the following         
     document.getElementById("NotSubmit").style.display = "none";
-    //document.getElementById("submit").disabled=true;
-    var useranswer = text.value;
-    if (useranswer == correctans[question_number]) {
+    //document.getElementById("submit").disabled=true;    
+    if (text == correctans[question_number]) { //text is the answer user put in
       //if user selected answer is the right one
       score += 10;
       document.getElementById("Correct").style.display = "block";
