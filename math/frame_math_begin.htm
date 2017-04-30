@@ -123,7 +123,8 @@ function starttimer() {
   }
 }
       
- function showNextQuestion() {   
+ function showNextQuestion() { 
+   document.getElementById("text_answer").readOnly = false;
      document.getElementById("NotSubmit").style.display = "none";
      document.getElementById(solution[question_number]).style.display = "none";
      document.getElementById("Correct").style.display = "none";
