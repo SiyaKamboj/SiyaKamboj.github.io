@@ -184,6 +184,7 @@ function randomize() {
 
 function submitanswer() {
   document.getElementById("submit").style.display = "none";  
+  document.getElementById("text_answer").readOnly = true;
   var text = document.getElementById("text_answer").value;
   if (text.length == 0) {
     // when no text is entered and "submit" is clicked.
