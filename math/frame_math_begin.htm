@@ -27,6 +27,9 @@
       <p> Placeholder </p>
       <input type="button" id="start" value="Start The Test" onclick="mathbegin()"/>
     </div>
+    
+    <input type="text" id="text_answer" style="display:none;"/>
+    <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none;" />
 
     <div id="q1" style="display:none;">
       <p class="question"> What is the product of 25 and 32? </p> 
@@ -61,8 +64,7 @@
           <p> The answer is correct </p>
           <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
         </div>
-            <input type="text" id="text_answer" style="display:none;"/>
-        <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none;" />
+            
     <div id="Ending" style="display:none;"> 
            <p> You finished the test. Your score is <br> </p>
            <div id="EndScore"> </div>
