@@ -29,10 +29,8 @@
     </div>
 
     <div id="q1" style="display:none;">
-      <p class="question"> What is the product of 25 and 32? </p>
-      <form>
-        <input type="text" id="text_answer"/>
-      </form>
+      <p class="question"> What is the product of 25 and 32? </p> 
+     
     </div>
     <div id="q1_sol" style="display:none;">
       <p> The correct answer is 800 </p>
@@ -47,7 +45,7 @@
     </div>
     <div id="q2" style="display:none;">
       <p> Enter 1/2 * 1/2 in its simplest fraction form</p>
-      <input type="text" id="text_answer"/>
+  
     </div>
     <div id="q2_sol" style="display:none;">
       <p> The correct answer is 0.25</p>
@@ -63,7 +61,7 @@
           <p> The answer is correct </p>
           <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
         </div>
-
+            <input type="text" id="text_answer"/>
         <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none;" />
     <div id="Ending" style="display:none;"> 
            <p> You finished the test. Your score is <br> </p>
@@ -93,6 +91,7 @@ function mathbegin() {
   randomize();
   document.getElementById("Initial").style.display = "none";
   document.getElementById(questions[0]).style.display = "block";
+  document.getElementById("text_answer").style.display="block";
   document.getElementById('submit').style.display = "block";
 }
 
@@ -113,7 +112,7 @@ function starttimer() {
     document.getElementById("submit").style.display = "none";
     document.getElementById(questions[question_number]).style.display = "none"; //questions[question_number] not QFrame
     document.getElementById("Correct").style.display = "none";
-    document.getElementById("Wrong").style.display = "none";
+    document.getElementById(solution[question_number]).style.display = "none";
     //document.getElementById("Ending").innerHTML = score + " out of " + (questions.length - 1) * 10;
     document.getElementById("Ending").style.display = "block";
     document.getElementById("EndScore").style.display = "block";
@@ -140,6 +139,7 @@ function starttimer() {
        document.getElementById('submit').style.visibility = "hidden";
      };   
    document.getElementById(questions[question_number]).style.display = "block";
+     document.getElementById("text_answer").style.display="block";   
      document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10; 
    
    };
