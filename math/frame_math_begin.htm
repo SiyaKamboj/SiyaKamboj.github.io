@@ -137,6 +137,7 @@ function starttimer() {
      };
      if (question_number == questions.length-1) {
        document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
+       document.getElementById("text_answer").style.display="none";  
        document.getElementById('submit').style.visibility = "hidden";
      };   
    document.getElementById(questions[question_number]).style.display = "block";
@@ -197,13 +198,13 @@ function submitanswer() {
       //if user selected answer is the right one
       score += 10;
       document.getElementById("Correct").style.display = "block";
-     document.getElementById("text_answer").style.display="none";  
+     //document.getElementById("text_answer").style.display="none";  
       document.getElementById("NotSubmit").style.display = "none";
 
     } else {
       // when answer is wrong
       document.getElementById(solution[question_number]).style.display = "block";
-      document.getElementById("text_answer").style.display="none";  
+      //document.getElementById("text_answer").style.display="none";  
       document.getElementById("submit").style.display="none";
 
     };
