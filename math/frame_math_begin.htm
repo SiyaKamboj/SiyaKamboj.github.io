@@ -65,6 +65,16 @@
         </div>
 
         <input type="submit" value="Submit" class="submit" id="submit" onclick="submitanswer()" style="display:none;" />
+    <div id="Ending" style="display:none;"> 
+           <p> You finished the test. Your score is <br> </p>
+           <div id="EndScore"> </div>
+       
+
+    </div>      
+     <div id="Expired" style="display:none;">
+          <p> Your time has expired, so you can not finish the test </p>
+          <input type="submit" class="submit" value="Try Again" id ="redo" onclick="vocabbeginnerstart()">
+     </div>
     
     <script>
       var questions = ["25x32", "1/2*1/2"];
@@ -136,7 +146,7 @@ function timerpause() {
   test_time_secs = 600 - count;
   clearTimeout(t);
 }
-if (question_number == 15) {
+if (question_number == 2) { //15
   clearInterval(t);
   clearTimeout(t);
   timerpause();
@@ -190,7 +200,7 @@ function submitanswer() {
 
     };
   };
-if (question_number == 14) {
+if (question_number == 2) { //14
   timerpause();
 };
 
