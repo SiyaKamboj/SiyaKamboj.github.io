@@ -18,10 +18,16 @@ img{
   font-family: verdana, Times New Roman;
 }
 
+#continue{
+  background-color: cornsilk;
+  font-family: verdana, Times New Roman;
+};
+
 #start{
   /*height: 10%;
   width:5%;*/
   background-color: coral;
+  font-family: verdana, Times New Roman;
 };
 
 
