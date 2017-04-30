@@ -28,13 +28,13 @@
       <input type="button" id="start" value="Start The Test" onclick="mathbegin()"/>
     </div>
 
-    <div id="25x32" style="display:none;">
+    <div id="q1" style="display:none;">
       <p class="question"> What is the product of 25 and 32? </p>
       <form>
         <input type="text" id="text_answer"/>
       </form>
     </div>
-    <div id="25x32_sol" style="display:none;">
+    <div id="q1_sol" style="display:none;">
       <p> The correct answer is 800 </p>
       <p> 25 </p>
       <p>*32 </p>
@@ -45,11 +45,11 @@
        <p> 800 </p>
        <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
     </div>
-    <div id="1/2*1/2" style="display:none;">
+    <div id="q2" style="display:none;">
       <p> Enter 1/2 * 1/2 in its simplest fraction form</p>
       <input type="text" id="text_answer"/>
     </div>
-    <div id="1/2*1/2_sol" style="display:none;">
+    <div id="q2_sol" style="display:none;">
       <p> The correct answer is 1/4</p>
       <p> Something </p>
       <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
@@ -77,9 +77,9 @@
      </div>
     
     <script>
-      var questions = ["25x32", "1/2*1/2"];
-var correctans = ["800", "1/4"];
-var solution = ["25x32_sol", "1/2*1/2_sol"];
+      var questions = ["q1", "q2" ];
+      var correctans = ["800", "1/4"];
+      var solution = ["q1_sol", "q2_sol"];
       var question_number=0;
 
 function mathbegin() {
@@ -129,15 +129,14 @@ function starttimer() {
      document.getElementById(questions[question_number]).style.display = "none";
      if (question_number < questions.length - 1) {
        question_number = question_number + 1;
+       document.getElementById(questions[question_number]).style.display = "block";
        document.getElementById('submit').style.visibility = "visible";
      };
      if (question_number == questions.length-1) {
        document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
        document.getElementById('submit').style.visibility = "hidden";
-     };
-     document.getElementById(questions[question_number]).style.display = "block";
-     document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10
-     
+     };     
+     document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10;     
    };
 
 
