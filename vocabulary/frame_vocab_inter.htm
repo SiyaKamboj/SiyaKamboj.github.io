@@ -389,7 +389,7 @@ if (question_number==15) {
        document.getElementById('submit').style.visibility = "visible";
      };
      if (question_number == questions.length-1) {
-       document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
+       document.getElementById("timer").innerHTML = "";//Time taken: " +  test_time_secs + " secs.";
        document.getElementById('submit').style.visibility = "hidden";
        timerpause();
      };
