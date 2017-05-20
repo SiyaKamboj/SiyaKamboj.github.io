@@ -29,7 +29,7 @@
   </p>
 </div>
 
-    <div id="circle_on_graph">
+    <div id="circle_on_graph" style="display:none;">
 <div id="container"></div>
 <img src="https://img.clipartfest.com/38f7d8e0f8a6d4918dcd3ce6582f2547_coordinate-graph-clipart-clipart-kid-coordinate-plane-clipart_1005-1024.png" alt="My Image" style="margin:0;padding:0;position:absolute;left:50px;top:50px;" width="22%" height="75%" />
 <canvas style="margin:0;padding:0;position:absolute;left:50px;top:50px;" id="imgCanvas" width="22%" height="75%" onclick="draw(event)"></canvas>
@@ -148,6 +148,7 @@ function starttimer() {
       
  function showNextQuestion() { 
    if (question=="circle_on_graph") { 
+     document.getElementById("circle_on_graph").style.display="block";
      var canvas = document.getElementById("imgCanvas");
 var context = canvas.getContext("2d");
 
