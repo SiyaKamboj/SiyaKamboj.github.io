@@ -280,6 +280,7 @@
 var x ;
  var t, mins, secs;
 var count=10;//600
+var left=0;
 function timerdisplay() {
     var mins=Math.floor(count/60);
     var secs=count % 60;
@@ -293,15 +294,17 @@ function starttimer() {
         // time is up
        clearTimeout(t); 
         clearInterval(t);
+	    var left=left+10;
       showNextQuestion();
     } else {
-        count--;
-        t = setTimeout(starttimer, 1000);
+        count--;	
+	t = setTimeout(starttimer, 1000);
     }
 }
 function timerpause() {
     // pauses countdown
     test_time_secs= 10-count;
+    var left=left+test_time_secs;
     clearTimeout(t);
     //document.getElementById("timer").style.display="none";
 }
@@ -389,7 +392,7 @@ if (question_number==15) {
        document.getElementById('submit').style.visibility = "visible";
      };
      if (question_number == questions.length-1) {
-       document.getElementById("timer").innerHTML = "";//Time taken: " +  test_time_secs + " secs.";
+       document.getElementById("timer").innerHTML = "Time taken:" + left + "seconds";//Time taken: " +  test_time_secs + " secs.";
        document.getElementById('submit').style.visibility = "hidden";
        timerpause();
      };
