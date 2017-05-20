@@ -149,9 +149,9 @@ function starttimer() {
  function showNextQuestion() { 
    if (questions=="q3") { 
      document.getElementById("q3").style.display="block";
-     document.getElementById("text_answer").style.display="none";
+     document.getElementById("text_answer").style.display="none";  
      var canvas = document.getElementById("imgCanvas");
-var context = canvas.getContext("2d");
+    var context = canvas.getContext("2d");
 
 function createImageOnCanvas(imageId) {
   canvas.style.display = "block";
@@ -218,7 +218,7 @@ function timerpause() {
   test_time_secs = 600 - count;
   clearTimeout(t);
 }
-if (question_number == 2) { //15
+if (question_number == 3) { //15
   clearInterval(t);
   clearTimeout(t);
   timerpause();
