@@ -99,13 +99,13 @@
      </div>
     
     <script>
-      var questions = ["q1", "q2", "q3", "Ending" ];
-      var correctans = ["800", "1/4", ""];
-      var solution = ["q1_sol", "q2_sol", "q3_sol"];
-      var question_number=0;
-      var score=0;
-      var test_time_mins = 0;
-      var test_time_secs = 0;
+      var questions = ["q1", "q2", "q3", "Ending"];
+var correctans = ["800", "1/4", ""];
+var solution = ["q1_sol", "q2_sol", "q3_sol"];
+var question_number = 0;
+var score = 0;
+var test_time_mins = 0;
+var test_time_secs = 0;
 
 function mathbegin() {
   var d = new Date();
@@ -115,7 +115,7 @@ function mathbegin() {
   randomize();
   document.getElementById("Initial").style.display = "none";
   document.getElementById(questions[0]).style.display = "block";
-  document.getElementById("text_answer").style.display="block";
+  document.getElementById("text_answer").style.display = "block";
   document.getElementById('submit').style.display = "block";
 }
 
@@ -146,38 +146,37 @@ function starttimer() {
     t = setTimeout(starttimer, 1000);
   }
 }
-      
- function showNextQuestion() { 
-   if (questions=="q3") { 
-     document.getElementById("q3").style.display="block";
-     document.getElementById("text_answer").style.visibility="hidden";  
-     var canvas = document.getElementById("imgCanvas");
+
+function showNextQuestion() {
+  if (questions[question_number] == "q3") {
+    document.getElementById("q3").style.display = "block";
+    document.getElementById("text_answer").style.visibility = "hidden";
+    var canvas = document.getElementById("imgCanvas");
     var context = canvas.getContext("2d");
-   }
-   else{         
-     document.getElementById("text_answer").readOnly = false;
-     document.getElementById("NotSubmit").style.display = "none";
-     document.getElementById(solution[question_number]).style.display = "none";
-     document.getElementById("Correct").style.display = "none";
-     document.getElementById("text_answer").value='';    
-     document.getElementById("submit").style.display = "block";
-     document.getElementById(questions[question_number]).style.display = "none";
-     if (question_number < questions.length - 1) {
-       question_number = question_number + 1;
-       timerpause();       
-       document.getElementById('submit').style.visibility = "visible";
-     };
-     if (question_number == questions.length-1) {
-       document.getElementById("timer").innerHTML = "Time taken: " +  test_time_secs + " secs.";
-       document.getElementById("text_answer").style.display="none";  
-       document.getElementById('submit').style.visibility = "hidden";
-     };   
-   document.getElementById(questions[question_number]).style.display = "block";
-     document.getElementById("text_answer").style.display="block";   
-     document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10; 
-   };
-   };
-      
+  } else {
+    document.getElementById("text_answer").readOnly = false;
+    document.getElementById("NotSubmit").style.display = "none";
+    document.getElementById(solution[question_number]).style.display = "none";
+    document.getElementById("Correct").style.display = "none";
+    document.getElementById("text_answer").value = '';
+    document.getElementById("submit").style.display = "block";
+    document.getElementById(questions[question_number]).style.display = "none";
+    if (question_number < questions.length - 1) {
+      question_number = question_number + 1;
+      timerpause();
+      document.getElementById('submit').style.visibility = "visible";
+    };
+    if (question_number == questions.length - 1) {
+      document.getElementById("timer").innerHTML = "Time taken: " + test_time_secs + " secs.";
+      document.getElementById("text_answer").style.display = "none";
+      document.getElementById('submit').style.visibility = "hidden";
+    };
+    document.getElementById(questions[question_number]).style.display = "block";
+    document.getElementById("text_answer").style.display = "block";
+    document.getElementById("EndScore").innerHTML = score + " out of " + (questions.length - 1) * 10;
+  };
+};
+
 
 
 function timerpause() {
@@ -190,7 +189,7 @@ if (question_number == 3) { //15
   clearTimeout(t);
   timerpause();
   document.getElementById("QFrame").style.display = "none";
-  document.getElementById("text_answer").style.display="none";  
+  document.getElementById("text_answer").style.display = "none";
   document.getElementById("timer").style.display = "none";
   document.getElementById("Ending").style.display = "block";
 }
@@ -215,13 +214,13 @@ function randomize() {
 }
 
 function submitanswer() {
-  document.getElementById("submit").style.display = "none";  
+  document.getElementById("submit").style.display = "none";
   document.getElementById("text_answer").readOnly = true;
   if questions == "q3"
   var text = document.getElementById("text_answer").value;
   if (text.length == 0) {
     // when no text is entered and "submit" is clicked.
-   document.getElementById("NotSubmit").style.display="block";
+    document.getElementById("NotSubmit").style.display = "block";
     document.getElementById("submit").style.display = "block";
 
   } else {
@@ -231,28 +230,28 @@ function submitanswer() {
     if (text == correctans[question_number]) { //text is the answer user put in
       //if user selected answer is the right one
       score += 10;
-      document.getElementById("text_answer").style.display="block";  
+      document.getElementById("text_answer").style.display = "block";
       document.getElementById("Correct").style.display = "block";
-     //document.getElementById("text_answer").style.display="none";  
+      //document.getElementById("text_answer").style.display="none";  
       document.getElementById("NotSubmit").style.display = "none";
 
     } else {
       // when answer is wrong
-      document.getElementById("text_answer").style.display="block"; 
+      document.getElementById("text_answer").style.display = "block";
       document.getElementById(solution[question_number]).style.display = "block";
       //document.getElementById("text_answer").style.display="none";  
-      document.getElementById("submit").style.display="none";
+      document.getElementById("submit").style.display = "none";
 
     };
   };
-if (question_number == 2) { //14
-  timerpause();
-  
-};
+  if (question_number == 2) { //14
+    timerpause();
+
+  };
 
 };
-      
-      //CIRCLE ON GRAPH PROCEDURE
+
+//CIRCLE ON GRAPH PROCEDURE
 function createImageOnCanvas(imageId) {
   canvas.style.display = "block";
   document.getElementById("images").style.overflowY = "hidden";
@@ -266,14 +265,14 @@ function draw(e) {
   var pos = getMousePos(canvas, e);
   posx = pos.x;
   posy = pos.y;
-  posx_t = Math.round((posx-250)/30);
-  posy_t = Math.round((- posy + 250)/30) ;
+  posx_t = Math.round((posx - 250) / 30);
+  posy_t = Math.round((-posy + 250) / 30);
   context.fillStyle = "#ff0000";
   context.beginPath();
   //context.arc(posx, posy, 4, 0, 2 * Math.PI); //change size of circle
-  context.arc(posx_t*30 +250, 250 - posy_t*30, 3, 0, 2 * Math.PI);
+  context.arc(posx_t * 30 + 250, 250 - posy_t * 30, 3, 0, 2 * Math.PI);
   context.fill();
-  
+
   document.getElementById("text_answer").Value = "(" + "" + posx_t + ", " + posy_t + ")";
   document.getElementById("text_answer").style.display = "none";
   //document.getElementById("coordinate").innerHTML = "<p>The coordinates are (" + "" + posx_t + ", " + posy_t + ")</p>";
@@ -288,6 +287,7 @@ function getMousePos(canvas, evt) {
 }
 
 window.draw = draw;
+
     </script>
 
 
