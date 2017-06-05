@@ -145,42 +145,13 @@ function starttimer() {
 }
       
  function showNextQuestion() { 
-   if (questions=="q3") { 
+   if (questions[question_number]=="q3") { 
      document.getElementById("q3").style.display="block";
      document.getElementById("text_answer").style.display="none";  
      var canvas = document.getElementById("imgCanvas");
     var context = canvas.getContext("2d");
-function createImageOnCanvas(imageId) {
-  canvas.style.display = "block";
-  document.getElementById("images").style.overflowY = "hidden";
-  var img = new Image(300, 300);
-  img.src = document.getElementById(imageId).src;
-  context.drawImage(img, (0), (0)); //onload....
-}
-function draw(e) {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  var pos = getMousePos(canvas, e);
-  posx = pos.x;
-  posy = pos.y;
-  //posx_t = posx-125;
-  //posy_t = posy ;
-  context.fillStyle = "#ff0000";
-  context.beginPath();
-  context.arc(posx, posy, 4, 0, 2 * Math.PI); //change size of circle
-  context.fill();
-  //document.getElementById("coordinate").innerHTML = "<p>The coordinates are (" + "" + posx_t + ", " + posy_t + ")</p>";
-}
-function getMousePos(canvas, evt) {
-  var rect = canvas.getBoundingClientRect();
-  return {
-    x: evt.clientX - rect.left,
-    y: evt.clientY - rect.top
-  };
-}
-window.draw = draw;
    }
-   else{
-     
+   else{    
      
    document.getElementById("text_answer").readOnly = false;
      document.getElementById("NotSubmit").style.display = "none";
