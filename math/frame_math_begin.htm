@@ -106,6 +106,8 @@ var question_number = 0;
 var score = 0;
 var test_time_mins = 0;
 var test_time_secs = 0;
+var t, mins, secs;
+var count = 600; //600
 
 function mathbegin() {
   var d = new Date();
@@ -119,8 +121,7 @@ function mathbegin() {
   document.getElementById('submit').style.display = "block";
 }
 
-var t, mins, secs;
-var count = 600; //600
+
 function timerdisplay() {
   var mins = Math.floor(count / 60);
   var secs = count % 60;
@@ -184,17 +185,6 @@ function timerpause() {
   test_time_secs = 600 - count;
   clearTimeout(t);
 }
-if (question_number == 3) { //15
-  clearInterval(t);
-  clearTimeout(t);
-  timerpause();
-  document.getElementById("QFrame").style.display = "none";
-  document.getElementById("text_answer").style.display = "none";
-  document.getElementById("timer").style.display = "none";
-  document.getElementById("Ending").style.display = "block";
-}
-
-
 
 function randomize() {
   var j, x, i, y, z;
