@@ -145,6 +145,7 @@ function starttimer() {
 }
       
  function showNextQuestion() { 
+   document.getElementById(questions[question_number]).style.display = "none";
    if (questions[question_number]=="q3") { 
      document.getElementById("text_answer").style.display="none";
      document.getElementById("q3").style.display="block";     
@@ -157,7 +158,7 @@ function starttimer() {
      document.getElementById("Correct").style.display = "none";
      document.getElementById("text_answer").value='';    
      document.getElementById("submit").style.display = "block";
-     document.getElementById(questions[question_number]).style.display = "none";
+     //document.getElementById(questions[question_number]).style.display = "none";
      if (question_number < questions.length - 1) {
        question_number = question_number + 1;
        timerpause();       
