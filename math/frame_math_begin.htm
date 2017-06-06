@@ -146,8 +146,8 @@ function starttimer() {
       
  function showNextQuestion() { 
    if (questions[question_number]=="q3") { 
-     document.getElementById("q3").style.display="block";
      document.getElementById("text_answer").style.display="none";
+     document.getElementById("q3").style.display="block";     
    }
    else{    
      
@@ -250,7 +250,8 @@ function createImageOnCanvas(imageId) {
   context.drawImage(img, (0), (0)); //onload....
 }
 function draw(e) {
-    context.clearRect(0, 0, canvas.width, canvas.height);
+  document.getElementById("text_answer").style.display="none";
+  context.clearRect(0, 0, canvas.width, canvas.height);
   var pos = getMousePos(canvas, e);
   posx = pos.x;
   posy = pos.y;
@@ -262,8 +263,7 @@ function draw(e) {
   context.arc(posx_t * 30 + 250, 250 - posy_t * 30, 3, 0, 2 * Math.PI);
   context.fill();
 
-  document.getElementById("text_answer").value = "Point has been selected";//"(" + "" + posx_t + ", " + posy_t + ")";
-  document.getElementById("text_answer").style.display = "none";
+  document.getElementById("text_answer").value = "(" + "" + posx_t + ", " + posy_t + ")";
   //document.getElementById("coordinate").innerHTML = "<p>The coordinates are (" + "" + posx_t + ", " + posy_t + ")</p>";
 }
 function getMousePos(canvas, evt) {
