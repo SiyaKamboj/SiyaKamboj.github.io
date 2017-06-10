@@ -1,1 +1,42 @@
+<html>
+<link type="text/css" rel="stylesheet" href="/css/mathstyle.css">
+<head>
+  <title>Math Homepage</title> 
+  <script src="jquery-3.2.1.min.js"></script>
+  <header>	 
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+</header>
+ 
+</head>
+<body style="background-color:cornsilk"><!--/burlywood=BACKGROUND COLOR!-->
+
+  <div class="menu">
+  <ul>
+    <a  href="frame_math_begin.htm"><li>Beginner</li></a>
+    <a  href="frame_math_inter.htm"><li>Intermediate</li></a>
+    <a  href="frame_math_advanced.htm"><li>Advanced</li></a>
+    <a  href="https://siyakamboj.github.io/"><li>Home</li></a>
+    
+  </ul>
+</div> 
+ 
+<script>
+  $( ".cross" ).hide();
+  $( ".menu" ).hide();
+  $( ".hamburger" ).click(function() {
+  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".hamburger" ).hide();
+  $( ".cross" ).show();
+  });
+  });
+  $( ".cross" ).click(function() {
+  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".cross" ).hide();
+  $( ".hamburger" ).show();
+  });
+  });
+</script>
+</body>
+  </html>
 
