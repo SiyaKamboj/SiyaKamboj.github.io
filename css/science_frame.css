@@ -11,14 +11,14 @@ h1 {
 }
 
 form{
-  margin-left:40%;
+  margin-left:30%;
   font-size:115%;
   font-family: verdana, Times New Roman;
 }
 
 .submit{    
     background-color: tomato;     
-    margin-left:45%;  
+    margin-left:35%;  
     color: black;
   font-family: verdana, Times New Roman;
 }
