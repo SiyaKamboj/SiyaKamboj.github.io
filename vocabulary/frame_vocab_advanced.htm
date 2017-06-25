@@ -295,7 +295,7 @@ function starttimer() {
     } else {
         count--;
         t = setTimeout(starttimer, 1000);
-    }
+    };
 }
 function timerpause() {
     // pauses countdown
@@ -304,18 +304,19 @@ function timerpause() {
     document.getElementById("timer").style.display="none";
 }
     
-if (question_number==15) {
+/* if (question_number==15) {
     clearInterval(t);
    clearTimeout(t);   
     timerpause();
     document.getElementById("QFrame").style.display="none";
     document.getElementById("timer").style.display = "none";
     document.getElementById("Ending").style.display="block";
-}
+} */
     
    
    function submitanswer() {     
-     document.getElementById("submit").style.display = "none";       
+     document.getElementById("submit").style.display = "none";
+     document.getElementById("NotSubmit").style.display = "none";
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
@@ -327,7 +328,7 @@ if (question_number==15) {
              //if user selected answer is the right one
            score += 10;           
            document.getElementById("Correct").style.display = "block";
-             document.getElementById("NotSubmit").style.display="none";
+           document.getElementById("NotSubmit").style.display="none";
              
          } else {
              // when answer is wrong
@@ -346,7 +347,7 @@ if (question_number==15) {
        };
      };
        if (question_number==14) {
-           timerpause();
+           timerpause();           
        };
        
    }
