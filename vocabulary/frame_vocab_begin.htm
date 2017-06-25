@@ -393,10 +393,16 @@ function timerpause() {
 		 document.getElementById("NotSubmit").style.display="none";
            score += 10;           
            document.getElementById("Correct").style.display = "block";
+		 
+     document.getElementById("submit").style.display = "none";  
+       document.getElementById("submit").disabled = true;
              
              
          } else {
              // when answer is wrong
+		 document.getElementById("NotSubmit").style.display="none";
+     document.getElementById("submit").style.display = "none";  
+       document.getElementById("submit").disabled = true;
            var correctanschoicenum = correctans[question_number];
            var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
            var label = document.querySelector(selector);
