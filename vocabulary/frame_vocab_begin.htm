@@ -345,7 +345,7 @@ function starttimer() {
     } else {
         count--;
         t = setTimeout(starttimer, 1000);
-    }
+    };
 }
 function timerpause() {
     // pauses countdown
@@ -362,14 +362,14 @@ function timerpause() {
       document.getElementById("Ending").style.display = "block";
    }*/
     
-if (question_number==15) {
+/*if (question_number==15) {
     clearInterval(t);
    clearTimeout(t);   
     timerpause();
     document.getElementById("QFrame").style.display="none";
     document.getElementById("timer").style.display = "none";
     document.getElementById("Ending").style.display="block";
-}
+}*/
     
    
 
@@ -412,6 +412,14 @@ if (question_number==15) {
        if (question_number==14) {
            timerpause();
        };
+	   if (question_number==15) {
+			clearInterval(t);
+			clearTimeout(t);   
+			timerpause();
+			document.getElementById("QFrame").style.display="none";
+			document.getElementById("timer").style.display = "none";
+			document.getElementById("Ending").style.display="block";
+		};
        
    }
 
