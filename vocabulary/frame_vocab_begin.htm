@@ -378,8 +378,8 @@ function timerpause() {
 
    function submitanswer() {     
      //document.getElementById("submit").style.display = "none";  
-       document.getElementById("submit").setClickable(false);
-       document.getElementById("submit").setText("<html><font color=black>3</font></html>");
+       document.getElementById("submit").disabled = true;
+       //document.getElementById("submit").setText("<html><font color=black>3</font></html>");
      var radios = document.getElementsByName(choices[question_number]);
      for (var i = 0, length = radios.length; i < length; i++) {
        if (radios[i].checked) {
