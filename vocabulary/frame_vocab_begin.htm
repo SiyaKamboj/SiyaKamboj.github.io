@@ -303,23 +303,20 @@
 
 
 
- function submitanswer() {
-   document.getElementById("NotSubmit").style.display = "none";      
+ function submitanswer() {        
    var radios = document.getElementsByName(choices[question_number]);
    for (var i = 0, length = radios.length; i < length; i++) {
      if (radios[i].checked) {
         document.getElementById("submit").disabled = true;  
-       // when a radio button is checked, do the following         
+       // when a radio button is checked, do the following          
        document.getElementById("NotSubmit").style.display = "none";       
        var useranswer = radios[i].value;
        if (i == correctans[question_number]) {
-         //if user selected answer is the right one
-         document.getElementById("NotSubmit").style.display = "none";
+         //if user selected answer is the right one         
          score += 10;
          document.getElementById("Correct").style.display = "block";         
        } else {
-         // when answer is wrong
-         document.getElementById("NotSubmit").style.display = "none";         
+         // when answer is wrong           
          var correctanschoicenum = correctans[question_number]; 
          var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
          var label = document.querySelector(selector);
