@@ -304,28 +304,22 @@
 
 
  function submitanswer() {
-   document.getElementById("NotSubmit").style.display = "none";   
-   document.getElementById("submit").disabled = true;   
+   document.getElementById("NotSubmit").style.display = "none";      
    var radios = document.getElementsByName(choices[question_number]);
    for (var i = 0, length = radios.length; i < length; i++) {
      if (radios[i].checked) {
+        document.getElementById("submit").disabled = true;  
        // when a radio button is checked, do the following         
-       document.getElementById("NotSubmit").style.display = "none";
-       document.getElementById("submit").disabled=true;
+       document.getElementById("NotSubmit").style.display = "none";       
        var useranswer = radios[i].value;
        if (i == correctans[question_number]) {
          //if user selected answer is the right one
          document.getElementById("NotSubmit").style.display = "none";
          score += 10;
          document.getElementById("Correct").style.display = "block";         
-         document.getElementById("submit").disabled = true;
-
-
        } else {
          // when answer is wrong
-         document.getElementById("NotSubmit").style.display = "none";
-         document.getElementById("submit").style.display = "none";
-         document.getElementById("submit").disabled = true;
+         document.getElementById("NotSubmit").style.display = "none";         
          var correctanschoicenum = correctans[question_number]; 
          var selector = 'label[for=' + radios[correctanschoicenum].id + ']';
          var label = document.querySelector(selector);
@@ -335,20 +329,19 @@
      } else {
        // when no radio button is selected and "submit" is clicked.
        document.getElementById("NotSubmit").style.display = "block";       
-       document.getElementById("submit").disabled = false;
      };
    };
    if (question_number == 14) {
      timerpause();
    };
-   if (question_number == 15) {
+   /*if (question_number == 15) {
      clearInterval(t);
      clearTimeout(t);
      timerpause();
      document.getElementById("QFrame").style.display = "none";
      document.getElementById("timer").style.display = "none";
      document.getElementById("Ending").style.display = "block";
-   };
+   };*/
 
  }
 
