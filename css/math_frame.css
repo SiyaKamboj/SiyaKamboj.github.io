@@ -157,7 +157,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    /*background-color: #333;*/
+  background-color: salmon;
 }
 
 li {
@@ -173,7 +174,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: peachpuff ;
 }
 
 li.dropdown {
