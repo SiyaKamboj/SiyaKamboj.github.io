@@ -44,18 +44,19 @@
 </ul>
 
 <div class="main">
+    <h1> Beginner Math Section</h1>
 <div id="Initial">
       <p> Placeholder </p>
       <input type="submit" id="start" value="Start The Test" onclick="mathbegin()"/>
     </div>
   
-  <h1> Beginner Math Section</h1>
+
     <div id="timer"></div>
     <div id="q3" style="display:none">
       <p>Select the point (1,1) from the image below</p>
 <p>Move the mouse over the image below to enlarge the image and select a point.</p>
 
-<div class="dropdown">
+<div class="dropdown" id="drop">
 
   <img src="/math/images/graph.png" alt="Graph" width="100" height="100">
   <div class="dropdown-content">
@@ -183,7 +184,7 @@ function starttimer() {
 }
       
  function showNextQuestion() { 
-   document.getElementById(questions[question_number]).style.display = "none";  
+   document.getElementById(questions[question_number]).style.display = "none"; 
      
      
    document.getElementById("text_answer").readOnly = false;
@@ -241,6 +242,10 @@ function submitanswer() {
     document.getElementById("submit").style.display = "block";
       document.getElementById("text_answer").readOnly = false;
   } else {
+    if (questions[question_number]="q3"){
+      document.getElementById("drop").addClass="no-hover";
+    };
+      
     // when a text button is written on, do the following         
     document.getElementById("NotSubmit").style.display = "none";
     //document.getElementById("submit").disabled=true;    
