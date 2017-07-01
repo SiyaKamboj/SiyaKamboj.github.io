@@ -183,12 +183,8 @@ function starttimer() {
 }
       
  function showNextQuestion() { 
-   document.getElementById(questions[question_number]).style.display = "none";
-   if (questions[question_number]=="q3") { 
-     document.getElementById("text_answer").style.display="none";
-     document.getElementById("q3").style.display="block";     
-   }
-   else{    
+   document.getElementById(questions[question_number]).style.display = "none";  
+     
      
    document.getElementById("text_answer").readOnly = false;
      document.getElementById("NotSubmit").style.display = "none";
