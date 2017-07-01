@@ -44,23 +44,10 @@
 </ul>
 
 <div class="main">
-
-
-
-<!--<html>
-  <link type="text/css" rel="stylesheet" href="/css/math_frame.css">
-  
-
-  <head>
-    <title> Beginner Section of Math </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="math_begin.js"></script>   
-  </head>
-
-  <body>!--> 
+<div id="Initial">
+      <p> Placeholder </p>
+      <input type="submit" id="start" value="Start The Test" onclick="mathbegin()"/>
+    </div>
   
   <h1> Beginner Math Section</h1>
     <div id="timer"></div>
@@ -79,21 +66,7 @@
   </div>
 </div>
 
-  </div>
-
-    
-    <!--<div id="q3" style="display:none;">
-<div id="container"></div>
-      <p>Select the point (3, 4) from the image below. </p>
-<img src="/math/images/graph.png" alt="My Image" style="margin:0;padding:0;position:absolute;left:50px;top:100px;" width="500" height="500" />
-<canvas style="margin:0;padding:0;position:absolute;left:50px;top:100px;" id="imgCanvas" width="500" height="500" onclick="draw(event)"></canvas>
-  </div>!-->
-    
-    
-    <div id="Initial">
-      <p> Placeholder </p>
-      <input type="submit" id="start" value="Start The Test" onclick="mathbegin()"/>
-    </div>
+  </div>   
     
     
 
@@ -103,6 +76,9 @@
     
     <div id="q2" style="display:none;">
       <p> Enter 1/2 * 1/2 in its simplest fraction form</p>  
+    </div>
+   <div id="q4" style="display:none;">
+      <p> Enter 1/3 * 1/3 in its simplest fraction form</p>  
     </div>
     
     <input type="text" id="text_answer" style="display:none;"/>
@@ -130,6 +106,12 @@
     <div id="q3_sol" style="display:none;">
       <p>Display the correct answer on (1, 1) </p>
       <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
+  </div>
+  
+  <div id="q4_sol" style="display:none;">
+      <p> The correct answer is 1/9</p>
+      <p> Something </p>
+      <input type="submit" value="Continue" class="continue" id="continue" onclick="showNextQuestion()" />
     </div>
 
         <div id="NotSubmit" style="display:none;">
@@ -155,9 +137,9 @@
     
     
     <script>
-      var questions = ["q1", "q2", "q3", "Ending" ];
-      var correctans = ["800", "1/4", "(1,1)"];
-      var solution = ["q1_sol", "q2_sol", "q3_sol"];
+      var questions = ["q1", "q2", "q3", "q4", "Ending" ];
+      var correctans = ["800", "1/4", "(1,1)", "1/9"];
+      var solution = ["q1_sol", "q2_sol", "q3_sol", "q4_sol"];
       var question_number=0;
       var score=0;
       var test_time_mins = 0;
