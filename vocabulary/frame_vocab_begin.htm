@@ -298,7 +298,7 @@
 
  function submitanswer() {        
    var radios = document.getElementsByName(choices[question_number]);
-   for (var i = 0, length = radios.length; i < length; i++) {
+   for (var i = 0, var length = radios.length; i < length; i++) {
      if (radios[i].checked) {
         document.getElementById("submit").disabled = true;  
        // when a radio button is checked, do the following          
