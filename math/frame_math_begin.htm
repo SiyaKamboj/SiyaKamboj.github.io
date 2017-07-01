@@ -184,8 +184,7 @@ function starttimer() {
 }
       
  function showNextQuestion() { 
-   document.getElementById(questions[question_number]).style.display = "none"; 
-     
+   document.getElementById(questions[question_number]).style.display = "none";   
      
    document.getElementById("text_answer").readOnly = false;
      document.getElementById("NotSubmit").style.display = "none";
@@ -242,10 +241,9 @@ function submitanswer() {
     document.getElementById("submit").style.display = "block";
       document.getElementById("text_answer").readOnly = false;
   } else {
-    if (questions[question_number]="q3"){
+    /*if (questions[question_number]="q3"){
       document.getElementById("drop").addClass="no-hover";
-    };
-      
+    };  */    
     // when a text button is written on, do the following         
     document.getElementById("NotSubmit").style.display = "none";
     //document.getElementById("submit").disabled=true;    
